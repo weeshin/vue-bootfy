@@ -53,10 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # deploy
   if [ "`git remote| grep site`" == "site" ] ; then
     git remote remove site
-  fi
-
-  #git remote add site https://github.com/vuematerial/vuematerial.github.io.git
-  #git push site `git subtree split --prefix dist/docs master`:master --force --progress
+  fi  
 
   npm publish
 fi

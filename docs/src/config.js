@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueBootstrap from '../../src';
+import VueBootfy from '../../src';
 import 'bootstrap/dist/css/bootstrap.css';
 
-Vue.use(VueBootstrap);
+Vue.use(VueBootfy);

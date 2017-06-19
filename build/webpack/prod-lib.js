@@ -22,7 +22,7 @@ const componentsPath = 'src/components';
 const components = getDirectories(path.resolve(__dirname, '../../', componentsPath));
 
 baseConfig.entry = {
-  'vue-bootstrap': ['./src/index.js'],
+  'vue-bootfy': ['./src/index.js'],
   'components/mdCore/index': ['./src/core']
 };
 
@@ -34,7 +34,7 @@ export default merge(baseConfig, {
   output: {
     path: config.rootPath,
     filename: '[name].js',
-    library: 'VueBootstrap',
+    library: 'VueBootfy',
     libraryTarget: 'umd'
   },
   module: {
@@ -105,7 +105,7 @@ export default merge(baseConfig, {
     }),
     new webpack.BannerPlugin({
       banner: `/*!
-* Vue-BootStrap v${version}
+* Vue-Bootfy v${version}
 * Made with Nick Lim
 * Released under the MIT License.
 */   `,

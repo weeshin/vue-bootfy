@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Vue-Bootstrap</h1>
+    <h1>Vue-Bootfy</h1>
     <a class="btn btn-link" href="/#/components/alert">Alerts</a>
     <a class="btn btn-link" href="/#/components/badge">Badges</a>
     <a class="btn btn-link" href="/#/components/breadcrumb">Breadcrumb</a>
