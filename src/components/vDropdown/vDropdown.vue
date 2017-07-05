@@ -1,15 +1,22 @@
 <template>
-  <div :class="[type, show]">
+  <div :class="[show]">
 
-    <button :class="['btn', className, sizeClassName]" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded"
-      @click="onClick">
-      {{title}}
-    </button>
-    <button type="button" :class="['btn', className, sizeClassName, 'dropdown-toggle', 'dropdown-toggle-split']" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-      @click="onClick">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
+    <div v-if="split" :class="['btn-group', upClassName]">
+      <button :class="['btn', className, sizeClassName]" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded">
+        {{title}}
+      </button>
+      <button type="button" :class="['btn', className, sizeClassName, 'dropdown-toggle', 'dropdown-toggle-split']" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+        @click="onClick">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+    </div>
 
+    <div v-else :class="[upClassName]">
+      <button :class="['btn', className, sizeClassName, 'dropdown-toggle']" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded"
+        @click="onClick">
+        {{title}}
+      </button>
+    </div>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
       <button v-for="item in items" class="dropdown-item" type="button">{{item.name}}</button>
@@ -41,6 +48,10 @@
         default: null
       },
       split: {
+        type: Boolean,
+        default: false
+      },
+      up: {
         type: Boolean,
         default: false
       }
@@ -84,11 +95,10 @@
           return 'btn-lg';
         }
       },
-      type() {
-        if (this.split) {
-          return 'btn-group';
+      upClassName: function() {
+        if (this.up) {
+          return 'dropup';
         }
-        return 'dropdown';
       }
     },
     methods: {
