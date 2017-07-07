@@ -1,24 +1,19 @@
 <template>
-  <div :class="[show]">
+  <div :class="['btn-group', show, upClassName]">
 
-    <div v-if="split" :class="['btn-group', upClassName]">
-      <button :class="['btn', className, sizeClassName]" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded">
-        {{title}}
-      </button>
-      <button type="button" :class="['btn', className, sizeClassName, 'dropdown-toggle', 'dropdown-toggle-split']" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-        @click="onClick">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-    </div>
+    <button v-if="split" :class="['btn', className, sizeClassName]" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded">
+      {{title}}
+    </button>
+    <button v-if="split" :class="['btn', className, sizeClassName, 'dropdown-toggle', 'dropdown-toggle-split']" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+      @click="onClick">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
 
-    <div v-else :class="[upClassName]">
-      <button :class="['btn', className, sizeClassName, 'dropdown-toggle']" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded"
-        @click="onClick">
-        {{title}}
-      </button>
-    </div>
+    <button v-else :class="['btn', className, sizeClassName, 'dropdown-toggle']" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded" @click="onClick">
+      {{title}}
+    </button>
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <div :class="['dropdown-menu', rightAlignClassName]">
       <button v-for="item in items" class="dropdown-item" type="button">{{item.name}}</button>
     </div>
   </div>
@@ -52,6 +47,10 @@
         default: false
       },
       up: {
+        type: Boolean,
+        default: false
+      },
+      rightAlign: {
         type: Boolean,
         default: false
       }
@@ -98,6 +97,11 @@
       upClassName: function() {
         if (this.up) {
           return 'dropup';
+        }
+      },
+      rightAlignClassName: function() {
+        if (this.rightAlign) {
+          return 'dropdown-menu-right';
         }
       }
     },

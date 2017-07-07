@@ -52,6 +52,13 @@
       <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" up></v-dropdown>
       <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" split up></v-dropdown>
     </div>
+
+    <br>
+
+    <div class="row">
+      <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" rightAlign></v-dropdown>
+      <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" split rightAlign></v-dropdown>
+    </div>
   </div>
 </template>
 
