@@ -5,6 +5,7 @@ import vButton from './components/vButton';
 import vButtonGroup from './components/vButtonGroup';
 import vCard from './components/vCard';
 import vDropdown from './components/vDropdown';
+import vForm from './components/vForm';
 import vModal from './components/vModal';
 import vNav from './components/vNav';
 import vPagination from './components/vPagination';
@@ -19,6 +20,7 @@ const options = {
   vButtonGroup,
   vCard,
   vDropdown,
+  vForm,
   vModal,
   vNav,
   vPagination,

@@ -5,6 +5,7 @@ const Button = (r) => require.ensure([], () => r(require('./pages/components/But
 const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/components/ButtonGroup')), 'buttonGroup');
 const Card = (r) => require.ensure([], () => r(require('./pages/components/Card')), 'card');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/Dropdown')), 'dropdown');
+const Forms = (r) => require.ensure([], () => r(require('./pages/components/Forms')), 'forms');
 const Modal = (r) => require.ensure([], () => r(require('./pages/components/Modal')), 'modal');
 const Nav = (r) => require.ensure([], () => r(require('./pages/components/Nav')), 'nav');
 const Pagination = (r) => require.ensure([], () => r(require('./pages/components/Pagination')), 'pagination');
@@ -47,6 +48,11 @@ const components = [
     path: '/components/dropdown',
     name: 'components:dropdown',
     component: Dropdown
+  },
+  {
+    path: '/components/forms',
+    name: 'components:forms',
+    component: Forms
   },
   {
     path: '/components/modal',

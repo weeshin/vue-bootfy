@@ -8,6 +8,7 @@
     <a class="btn btn-link" href="/#/components/button-group">Button Group</a>
     <a class="btn btn-link" href="/#/components/card">Card</a>
     <a class="btn btn-link" href="/#/components/dropdown">Dropdown</a>
+    <a class="btn btn-link" href="/#/components/forms">Forms</a>
     <a class="btn btn-link" href="/#/components/modal">Modal</a>
     <a class="btn btn-link" href="/#/components/nav">Nav</a>
     <a class="btn btn-link" href="/#/components/pagination">Pagination</a>
