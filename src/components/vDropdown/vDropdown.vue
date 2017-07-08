@@ -14,7 +14,8 @@
     </button>
 
     <div :class="['dropdown-menu', rightAlignClassName]">
-      <button v-for="item in items" class="dropdown-item" type="button">{{item.name}}</button>
+      <!-- <button v-for="item in items" class="dropdown-item" type="button">{{item.name}}</button> -->
+      <slot></slot>
     </div>
   </div>
 </template>

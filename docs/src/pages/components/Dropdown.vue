@@ -57,7 +57,12 @@
 
     <div class="row">
       <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" rightAlign></v-dropdown>
-      <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" split rightAlign></v-dropdown>
+      <v-dropdown title="Dropdown menu lo" :items="items" vStyle="secondary" size="lg" split rightAlign>
+        <v-dropdown-item @click="itemClick">Action1</v-dropdown-item>
+        <v-dropdown-item @click="itemClick">Action2</v-dropdown-item>
+        <v-dropdown-divider/>
+        <v-dropdown-item @click="itemClick">Action3</v-dropdown-item>
+      </v-dropdown>
     </div>
   </div>
 </template>
@@ -71,6 +76,11 @@
           {id: '2', name: 'Action2'}
         ]
       };
+    },
+    methods: {
+      itemClick: function() {
+        console.info('item click');
+      }
     }
   };
 </script>
