@@ -1,9 +1,11 @@
 <template>
   <v-form-group>
-    <label :for="id">{{ label }}</label>
-    <textarea v-if="textarea" class="form-control" :id="id" :rows="rows"></textarea>
+    <label v-if="label" :for="id">{{ label }}</label>
 
-    <input v-else :type="type" class="form-control" :id="id" :aria-describedby="helpId" :placeholder="placeholder">
+    <textarea v-if="textarea" class="form-control" :id="id" :rows="rows"
+      v-bind:readonly="readonly"></textarea>
+    <input v-else :type="type" class="form-control" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
+      v-bind:readonly="readonly">
 
     <small v-if="description" :id="helpId" class="form-text text-muted">{{ description }}</small>
   </v-form-group>
@@ -27,6 +29,10 @@ export default {
     rows: {
       type: Number,
       default: 5
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     }
   },
   components: {

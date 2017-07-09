@@ -34,12 +34,29 @@
       label="File input"
       type="file"  description="This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line."></v-form-input>
 
-    <v-form-radio label="Radio buttons">
-      <v-form-radio-item label="Option one is this and that&mdash;be sure to include why it's great" name="optionsRadios" id="optionsRadios1"></v-form-radio-item>
-      <v-form-radio-item label="Option two can be something else and selecting it will deselect option one" name="optionsRadios" id="optionsRadios2"></v-form-radio-item>
+    <v-form-radio label="Radio buttons" :items="radioOptions">
     </v-form-radio>
+
+    <v-form-check label="Check me out"></v-form-check>
+    <v-button type="submit" btnStyle="primary">Submit</v-button>
+
+    <br><br><br>
+    <h2>Readonly</h2>
+
+    <v-form-input type="text" placeholder="Readonly input here…" readonly></v-form-input>
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      radioOptions: [
+        {id: 'roption1', value: 'option1', label: 'Option one is this and that&mdash;be sure to include why it\'s great'},
+        {id: 'roption2', value: 'option2', label: 'Option two is this and that&mdash;be sure to include why it\'s great', checked: true},
+        {id: 'roption2', value: 'option2', label: 'Option two is this and that&mdash;be sure to include why it\'s great', disabled: true}
+      ]
+    };
+  }
+};
 </script>
