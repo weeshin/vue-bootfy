@@ -1,7 +1,7 @@
 <template>
   <v-form-group>
     <label :for="id">{{ label }}</label>
-    <select class="form-control" :id="id" :multiple="multiple">
+    <select :class="['form-control', controlGroupSizeClass]" :id="id" :multiple="multiple">
       <slot></slot>
     </select>
   </v-form-group>
