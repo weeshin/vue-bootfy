@@ -23,6 +23,14 @@ export default {
     feedback: {
       type: Object,
       default: null
+    },
+    row: {
+      type: Boolean,
+      default: null
+    },
+    colsize: {
+      type: Number,
+      default: null
     }
   },
   computed: {
@@ -59,6 +67,21 @@ export default {
             return 'form-control-danger';
           default:
         }
+      }
+    },
+    rowClass: function() {
+      if (this.row) {
+        return 'row';
+      }
+    },
+    colLeftClass: function() {
+      if (this.row) {
+        return this.colsize ? 'col-form-label col-' + this.colsize : null;
+      }
+    },
+    colRightClass: function() {
+      if (this.row) {
+        return this.colsize ? 'col-' + (12 - this.colsize) : null;
       }
     }
   }

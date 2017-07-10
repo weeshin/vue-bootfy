@@ -1,5 +1,5 @@
 <template>
-  <div :class="['form-group', feedbackStatusClass]">
+  <div :class="['form-group', feedbackStatusClass, rowClass]">
     <slot></slot>
   </div>
 </template>

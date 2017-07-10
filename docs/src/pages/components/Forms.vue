@@ -45,7 +45,12 @@
     </example-container>
 
     <h2>Textual inputs</h2>
-    
+    <example-container>
+      <v-form-input id="exampleInputEmail1"
+        label="Email address"
+        type="email" placeholder="Enter email" description="We'll never share your email with anyone else."
+        row colsize="2"></v-form-input>      
+    </example-container>
     <h2>Readonly</h2>
 
     <v-form-input type="text" placeholder="Readonly input here…" readonly></v-form-input>
