@@ -5,10 +5,10 @@
     <textarea v-if="textarea" class="form-control" :id="id" :rows="rows"
       v-bind:readonly="readonly"></textarea>
 
-
-      <input v-else :type="type" :class="['form-control', controlGroupSizeClass, feedbackControlClass]" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
-        v-bind:readonly="readonly">
-
+    <div v-else :class="[colRightClass]">
+      <input :type="type" :class="['form-control', controlGroupSizeClass, feedbackControlClass]" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
+        v-bind:readonly="readonly" :value="value">
+    </div>
 
     <div v-if="feedback" class="form-control-feedback">{{ feedback.message }}</div>
     <small v-if="description" :id="helpId" class="form-text text-muted">{{ description }}</small>
@@ -37,6 +37,10 @@ export default {
     readonly: {
       type: Boolean,
       default: false
+    },
+    value: {
+      type: String,
+      default: null
     }
   },
   components: {

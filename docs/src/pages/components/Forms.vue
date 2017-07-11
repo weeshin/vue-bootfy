@@ -46,10 +46,19 @@
 
     <h2>Textual inputs</h2>
     <example-container>
-      <v-form-input id="exampleInputEmail1"
-        label="Email address"
-        type="email" placeholder="Enter email" description="We'll never share your email with anyone else."
-        row colsize="2"></v-form-input>      
+      <v-form-input label="Text" type="text" row colsize="2" value="Artisanal kale" />
+      <v-form-input label="Search" type="search" row colsize="2" value="How do I shoot web" />
+      <v-form-input label="Email" type="email" row colsize="2" value="bootstrap@example.com" />
+      <v-form-input label="URL" type="email" row colsize="2" value="https://getbootstrap.com" />
+      <v-form-input label="Telephone" type="tel" row colsize="2" value="1-(555)-555-5555" />
+      <v-form-input label="Password" type="password" row colsize="2" value="123456" />
+      <v-form-input label="Number" type="number" row colsize="2" value="42" />
+      <v-form-input label="Date and time" type="datetime-local" row colsize="2" value="2011-08-19T13:45:00" />
+      <v-form-input label="Date" type="date" row colsize="2" value="2011-08-19" />
+      <v-form-input label="Month" type="month" row colsize="2" value="2011-08" />
+      <v-form-input label="Week" type="week" row colsize="2" value="2011-W33" />
+      <v-form-input label="Time" type="time" row colsize="2" value="13:45:00" />
+      <v-form-input label="Color" type="color" row colsize="2" value="#502382" />
     </example-container>
     <h2>Readonly</h2>
 

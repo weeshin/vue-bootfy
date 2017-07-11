@@ -31,6 +31,10 @@ export default {
     colsize: {
       type: Number,
       default: null
+    },
+    inline: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
