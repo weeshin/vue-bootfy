@@ -1,12 +1,12 @@
 <template>
-  <v-form-group :feedback="feedback" :row="row">
+  <v-form-group :feedback="feedback" :row="row" :srOnly="srOnly">
     <label v-if="label" :for="id" :class="[colLeftClass]">{{ label }}</label>
 
     <textarea v-if="textarea" class="form-control" :id="id" :rows="rows"
       v-bind:readonly="readonly"></textarea>
 
     <div v-else :class="[colRightClass]">
-      <input :type="type" :class="['form-control', controlGroupSizeClass, feedbackControlClass]" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
+      <input :type="type" :class="[formControlClass, controlGroupSizeClass, feedbackControlClass]" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
         v-bind:readonly="readonly" :value="value">
     </div>
 
@@ -51,6 +51,12 @@ export default {
       if (this.id) {
         return this.id + 'Help';
       }
+    },
+    formControlClass: function() {
+      if (this.srOnly) {
+        return 'form-control mb-2 mr-sm-2 mb-sm-0';
+      }
+      return 'form-control';
     }
   }
 };

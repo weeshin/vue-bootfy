@@ -1,5 +1,8 @@
 <template>
-  <div :class="['form-group', feedbackStatusClass, rowClass]">
+  <div v-if="srOnly">
+    <slot></slot>
+  </div>
+  <div v-else :class="['form-group', feedbackStatusClass, rowClass]">
     <slot></slot>
   </div>
 </template>

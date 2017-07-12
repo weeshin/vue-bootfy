@@ -32,9 +32,9 @@ export default {
       type: Number,
       default: null
     },
-    inline: {
+    srOnly: {
       type: Boolean,
-      default: false
+      default: null
     }
   },
   computed: {
@@ -81,6 +81,9 @@ export default {
     colLeftClass: function() {
       if (this.row) {
         return this.colsize ? 'col-form-label col-' + this.colsize : null;
+      }
+      if (this.srOnly) {
+        return 'sr-only';
       }
     },
     colRightClass: function() {
