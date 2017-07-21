@@ -6,6 +6,9 @@ const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/component
 const Card = (r) => require.ensure([], () => r(require('./pages/components/Card')), 'card');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/Dropdown')), 'dropdown');
 const Forms = (r) => require.ensure([], () => r(require('./pages/components/Forms')), 'forms');
+const InputGroup = (r) => require.ensure([], () => r(require('./pages/components/InputGroup')), 'inputGroup');
+const Jumbotron = (r) => require.ensure([], () => r(require('./pages/components/Jumbotron')), 'jumbotron');
+const ListGroup = (r) => require.ensure([], () => r(require('./pages/components/ListGroup')), 'listGroup');
 const Modal = (r) => require.ensure([], () => r(require('./pages/components/Modal')), 'modal');
 const Nav = (r) => require.ensure([], () => r(require('./pages/components/Nav')), 'nav');
 const Pagination = (r) => require.ensure([], () => r(require('./pages/components/Pagination')), 'pagination');
@@ -54,6 +57,9 @@ const components = [
     name: 'components:forms',
     component: Forms
   },
+  { path: '/components/inputgroup', name: 'components:inputgroup', component: InputGroup },
+  { path: '/components/jumbotron', name: 'components:jumbotron', component: Jumbotron },
+  { path: '/components/listgroup', name: 'components:listgroup', component: ListGroup },
   {
     path: '/components/modal',
     name: 'components:modal',

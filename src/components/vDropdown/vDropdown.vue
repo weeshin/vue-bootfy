@@ -1,5 +1,5 @@
 <template>
-  <div :class="['btn-group', show, upClassName]">
+  <div :class="[btnGroupClassName, show, upClassName]">
 
     <button v-if="split" :class="['btn', className, sizeClassName]" type="button" :id="id" data-toggle="dropdown" aria-haspopup="true" :aria-expanded="expanded">
       {{title}}
@@ -14,7 +14,6 @@
     </button>
 
     <div :class="['dropdown-menu', rightAlignClassName]">
-      <!-- <button v-for="item in items" class="dropdown-item" type="button">{{item.name}}</button> -->
       <slot></slot>
     </div>
   </div>
@@ -37,7 +36,7 @@
       },
       title: {
         type: String,
-        default: 'Select Item'
+        default: null
       },
       items: {
         type: Array,
@@ -52,6 +51,10 @@
         default: false
       },
       rightAlign: {
+        type: Boolean,
+        default: false
+      },
+      inputBtnGroup: {
         type: Boolean,
         default: false
       }
@@ -104,6 +107,12 @@
         if (this.rightAlign) {
           return 'dropdown-menu-right';
         }
+      },
+      btnGroupClassName: function() {
+        if (this.inputBtnGroup) {
+          return 'input-group-btn';
+        }
+        return 'btn-group';
       }
     },
     methods: {

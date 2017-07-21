@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 125);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,39 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 17:
+/***/ 125:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(15);
+
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vProgress = __webpack_require__(67);
+
+var _vProgress2 = _interopRequireDefault(_vProgress);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-progress', _vProgress2.default);
+}
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -222,15 +254,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 36:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(17),
+  __webpack_require__(34),
   /* template */
-  __webpack_require__(40),
+  __webpack_require__(74),
   /* styles */
   null,
   /* scopeId */
@@ -263,7 +295,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 40:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -287,38 +319,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-2127c324", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 7:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = install;
-
-var _vProgress = __webpack_require__(36);
-
-var _vProgress2 = _interopRequireDefault(_vProgress);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function install(Vue) {
-  Vue.component('v-progress', _vProgress2.default);
-}
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ 76:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(7);
-
 
 /***/ })
 

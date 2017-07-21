@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 108);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,15 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 10:
+/***/ 108:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(4);
+
+
+/***/ }),
+
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -231,50 +239,26 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 18:
+/***/ 35:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = install;
-
-var _vBadge = __webpack_require__(20);
-
-var _vBadge2 = _interopRequireDefault(_vBadge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function install(Vue) {
-  Vue.component('v-badge', _vBadge2.default);
-}
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ 20:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(18)
+  __webpack_require__(35)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(10),
+  __webpack_require__(18),
   /* template */
-  __webpack_require__(39),
+  __webpack_require__(72),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -307,7 +291,31 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 39:
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vBadge = __webpack_require__(37);
+
+var _vBadge2 = _interopRequireDefault(_vBadge);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-badge', _vBadge2.default);
+}
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -322,14 +330,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-11a20786", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 59:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(2);
-
 
 /***/ })
 

@@ -73,12 +73,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 69);
+/******/ 	return __webpack_require__(__webpack_require__.s = 118);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 69:
+/***/ 118:
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackMissingModule() { throw new Error("Cannot find module \"./src/components/vJumbotron\""); }());

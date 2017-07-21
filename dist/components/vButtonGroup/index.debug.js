@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 62);
+/******/ 	return __webpack_require__(__webpack_require__.s = 111);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,15 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 13:
+/***/ 111:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(7);
+
+
+/***/ }),
+
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -244,15 +252,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 23:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(13),
+  __webpack_require__(21),
   /* template */
-  __webpack_require__(51),
+  __webpack_require__(95),
   /* styles */
   null,
   /* scopeId */
@@ -285,7 +293,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 24:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -293,7 +301,7 @@ var Component = __webpack_require__(0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(52),
+  __webpack_require__(96),
   /* styles */
   null,
   /* scopeId */
@@ -326,7 +334,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -337,11 +345,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vButtonGroup = __webpack_require__(23);
+var _vButtonGroup = __webpack_require__(40);
 
 var _vButtonGroup2 = _interopRequireDefault(_vButtonGroup);
 
-var _vVerticalButtonGroup = __webpack_require__(24);
+var _vVerticalButtonGroup = __webpack_require__(41);
 
 var _vVerticalButtonGroup2 = _interopRequireDefault(_vVerticalButtonGroup);
 
@@ -355,7 +363,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 51:
+/***/ 95:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -377,7 +385,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 52:
+/***/ 96:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -396,14 +404,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-a0a15720", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 62:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(5);
-
 
 /***/ })
 

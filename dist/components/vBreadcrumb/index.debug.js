@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 60);
+/******/ 	return __webpack_require__(__webpack_require__.s = 109);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,15 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 11:
+/***/ 109:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(5);
+
+
+/***/ }),
+
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -209,15 +217,15 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 21:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(11),
+  __webpack_require__(19),
   /* template */
-  __webpack_require__(48),
+  __webpack_require__(89),
   /* styles */
   null,
   /* scopeId */
@@ -250,7 +258,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -261,7 +269,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vBreadcrumb = __webpack_require__(21);
+var _vBreadcrumb = __webpack_require__(38);
 
 var _vBreadcrumb2 = _interopRequireDefault(_vBreadcrumb);
 
@@ -274,7 +282,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 48:
+/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -300,14 +308,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-66b198cc", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 60:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(3);
-
 
 /***/ })
 

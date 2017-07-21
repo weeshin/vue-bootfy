@@ -85,6 +85,14 @@
       </v-form>
     </example-container>
 
+    <h2>Using the Grid</h2>
+    <example-container>
+      <div class="container">
+        <v-form>
+        </v-form>
+      </div>
+    </example-container>
+
     <h2>Readonly</h2>
 
     <v-form-input type="text" placeholder="Readonly input here…" readonly></v-form-input>

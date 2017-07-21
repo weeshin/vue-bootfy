@@ -6,6 +6,9 @@ import vButtonGroup from './components/vButtonGroup';
 import vCard from './components/vCard';
 import vDropdown from './components/vDropdown';
 import vForm from './components/vForm';
+import vInputGroup from './components/vInputGroup';
+import vJumbotron from './components/vJumbotron';
+import vListGroup from './components/vListGroup';
 import vModal from './components/vModal';
 import vNav from './components/vNav';
 import vPagination from './components/vPagination';
@@ -21,6 +24,9 @@ const options = {
   vCard,
   vDropdown,
   vForm,
+  vInputGroup,
+  vJumbotron,
+  vListGroup,
   vModal,
   vNav,
   vPagination,

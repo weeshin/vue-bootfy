@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 77);
+/******/ 	return __webpack_require__(__webpack_require__.s = 126);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,64 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 37:
+/***/ 101:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "tooltip tooltip-top",
+    attrs: {
+      "role": "tooltip"
+    }
+  }, [_c('div', {
+    staticClass: "tooltip-arrow"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "tooltip-inner"
+  }, [_vm._t("default")], 2)])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-e8506be2", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 126:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(16);
+
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vTooltip = __webpack_require__(68);
+
+var _vTooltip2 = _interopRequireDefault(_vTooltip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-tooltip', _vTooltip2.default);
+}
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -184,7 +241,7 @@ var Component = __webpack_require__(0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(55),
+  __webpack_require__(101),
   /* styles */
   null,
   /* scopeId */
@@ -214,63 +271,6 @@ if (false) {(function () {
 
 module.exports = Component.exports
 
-
-/***/ }),
-
-/***/ 55:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "tooltip tooltip-top",
-    attrs: {
-      "role": "tooltip"
-    }
-  }, [_c('div', {
-    staticClass: "tooltip-arrow"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "tooltip-inner"
-  }, [_vm._t("default")], 2)])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-e8506be2", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 77:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(8);
-
-
-/***/ }),
-
-/***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = install;
-
-var _vTooltip = __webpack_require__(37);
-
-var _vTooltip2 = _interopRequireDefault(_vTooltip);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function install(Vue) {
-  Vue.component('v-tooltip', _vTooltip2.default);
-}
-module.exports = exports['default'];
 
 /***/ })
 
