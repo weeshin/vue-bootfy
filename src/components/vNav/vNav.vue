@@ -1,26 +1,87 @@
 <template>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+  <ul v-if="navbar" class="navbar-nav mr-auto">
+    <slot></slot>
+  </ul>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+  <ul v-else :class="['nav', classnames]"
+      :role="[rolelist]">
+    <slot></slot>
+  </ul>
 </template>
+<script>
+export default {
+  props: {
+    navbar: {
+      type: Boolean,
+      default: false
+    },
+    center: {
+      type: Boolean,
+      default: false
+    },
+    end: {
+      type: Boolean,
+      default: false
+    },
+    vertical: {
+      type: Boolean,
+      default: false
+    },
+    tabs: {
+      type: Boolean,
+      default: false
+    },
+    pills: {
+      type: Boolean,
+      default: false
+    },
+    fill: {
+      type: Boolean,
+      default: false
+    },
+    justified: {
+      type: Boolean,
+      default: false
+    },
+    row: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    classnames: function() {
+      const allClassnames = [];
+
+      if (this.center) {
+        allClassnames.push('justify-content-center');
+      }
+      if (this.end) {
+        allClassnames.push('justify-content-end');
+      }
+      if (this.vertical) {
+        return 'flex-column flex-sm-column';
+      }
+      if (this.rowClassname) {
+        return 'flex-sm-row';
+      }
+      if (this.tabs) {
+        return 'nav-tabs';
+      }
+      if (this.pills) {
+        return 'nav-pills';
+      }
+      if (this.fill) {
+        return 'nav-fill';
+      }
+      if (this.justified) {
+        return 'nav-justified';
+      }
+    },
+    rolelist: function() {
+      if (this.tab) {
+        return 'tablist';
+      }
+    }
+  }
+};
+</script>

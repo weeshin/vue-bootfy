@@ -11,7 +11,10 @@ const Jumbotron = (r) => require.ensure([], () => r(require('./pages/components/
 const ListGroup = (r) => require.ensure([], () => r(require('./pages/components/ListGroup')), 'listGroup');
 const Modal = (r) => require.ensure([], () => r(require('./pages/components/Modal')), 'modal');
 const Nav = (r) => require.ensure([], () => r(require('./pages/components/Nav')), 'nav');
+const NavBar = (r) => require.ensure([], () => r(require('./pages/components/NavBar')), 'navBar');
 const Pagination = (r) => require.ensure([], () => r(require('./pages/components/Pagination')), 'pagination');
+const Popovers = (r) => require.ensure([], () => r(require('./pages/components/Popovers')), 'popovers');
+const Scrollspy = (r) => require.ensure([], () => r(require('./pages/components/Scrollspy')), 'scrollspy');
 const Progress = (r) => require.ensure([], () => r(require('./pages/components/Progress')), 'progress');
 
 const main = [];
@@ -71,9 +74,24 @@ const components = [
     component: Nav
   },
   {
+    path: '/components/navbar',
+    name: 'components:navbar',
+    component: NavBar
+  },
+  {
     path: '/components/pagination',
     name: 'components:pagination',
     component: Pagination
+  },
+  {
+    path: '/components/popovers',
+    name: 'components:popovers',
+    component: Popovers
+  },
+  {
+    path: '/components/scrollspy',
+    name: 'components:scrollspy',
+    component: Scrollspy
   },
   {
     path: '/components/progress',

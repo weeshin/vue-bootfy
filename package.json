@@ -15,7 +15,7 @@
     "bootfy",
     "vue-bootfy"
   ],
-  "main": "dist/vue-bootstrap.js",
+  "main": "dist/vue-bootfy.js",
   "files": [
     "dist",
     "src",

@@ -1,22 +1,33 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <h1>Vue-Bootfy</h1>
-    <a class="btn btn-link" href="/#/components/alert">Alerts</a>
-    <a class="btn btn-link" href="/#/components/badge">Badges</a>
-    <a class="btn btn-link" href="/#/components/breadcrumb">Breadcrumb</a>
-    <a class="btn btn-link" href="/#/components/button">Buttons</a>
-    <a class="btn btn-link" href="/#/components/button-group">Button Group</a>
-    <a class="btn btn-link" href="/#/components/card">Card</a>
-    <a class="btn btn-link" href="/#/components/dropdown">Dropdown</a>
-    <a class="btn btn-link" href="/#/components/forms">Forms</a>
-    <a class="btn btn-link" href="/#/components/inputgroup">InputGroup</a>
-    <a class="btn btn-link" href="/#/components/jumbotron">Jumbotron</a>
-    <a class="btn btn-link" href="/#/components/listgroup">ListGroup</a>
-    <a class="btn btn-link" href="/#/components/modal">Modal</a>
-    <a class="btn btn-link" href="/#/components/nav">Nav</a>
-    <a class="btn btn-link" href="/#/components/pagination">Pagination</a>
-    <a class="btn btn-link" href="/#/components/progress">Progress</a>
-    <router-view></router-view>
+    <div class="row">
+      <div class="col col-sm-10 col-md-10 ">
+        <router-view></router-view>
+      </div>
+      <div class="col col-sm-2 col-md-2">
+        <ul class="list-group">
+          <a class="list-group-item list-group-item-action" href="/#/components/alert">Alerts</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/badge">Badges</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/breadcrumb">Breadcrumb</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/button">Buttons</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/button-group">Button Group</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/card">Card</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/dropdown">Dropdown</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/forms">Forms</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/inputgroup">InputGroup</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/jumbotron">Jumbotron</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/listgroup">ListGroup</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/modal">Modal</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/nav">Nav</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/navbar">NavBar</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/pagination">Pagination</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/popovers">Popovers</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/progress">Progress</a>
+          <a class="list-group-item list-group-item-action" href="/#/components/scrollspy">Scrollspy</a>
+        </ul>
+      </div>
+    </div>
   </div>
 
 </template>

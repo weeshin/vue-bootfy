@@ -11,6 +11,7 @@ import vJumbotron from './components/vJumbotron';
 import vListGroup from './components/vListGroup';
 import vModal from './components/vModal';
 import vNav from './components/vNav';
+import vNavBar from './components/vNavBar';
 import vPagination from './components/vPagination';
 import vProgress from './components/vProgress';
 import vTooltips from './components/vTooltips';
@@ -29,6 +30,7 @@ const options = {
   vListGroup,
   vModal,
   vNav,
+  vNavBar,
   vPagination,
   vProgress,
   vTooltips
