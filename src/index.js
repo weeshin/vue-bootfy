@@ -4,8 +4,10 @@ import vBreadcrumb from './components/vBreadcrumb';
 import vButton from './components/vButton';
 import vButtonGroup from './components/vButtonGroup';
 import vCard from './components/vCard';
+import vCode from './components/vCode';
 import vDropdown from './components/vDropdown';
 import vForm from './components/vForm';
+import vGrid from './components/vGrid';
 import vInputGroup from './components/vInputGroup';
 import vJumbotron from './components/vJumbotron';
 import vListGroup from './components/vListGroup';
@@ -13,8 +15,10 @@ import vModal from './components/vModal';
 import vNav from './components/vNav';
 import vNavBar from './components/vNavBar';
 import vPagination from './components/vPagination';
+import vPopover from './components/vPopover';
 import vProgress from './components/vProgress';
 import vTooltips from './components/vTooltips';
+import AnnoyingBackground from './directives';
 
 const options = {
   vAlert,
@@ -23,8 +27,10 @@ const options = {
   vButton,
   vButtonGroup,
   vCard,
+  vCode,
   vDropdown,
   vForm,
+  vGrid,
   vInputGroup,
   vJumbotron,
   vListGroup,
@@ -32,8 +38,13 @@ const options = {
   vNav,
   vNavBar,
   vPagination,
+  vPopover,
   vProgress,
   vTooltips
+};
+
+const directives = {
+  AnnoyingBackground
 };
 
 options.install = (Vue) => {
@@ -43,6 +54,10 @@ options.install = (Vue) => {
     if (componentInstaller && component !== 'install') {
       Vue.use(componentInstaller);
     }
+  }
+
+  for (let directive in directives) {
+    Vue.use(directives[directive]);
   }
 };
 

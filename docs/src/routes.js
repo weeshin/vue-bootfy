@@ -1,11 +1,15 @@
+const Home = (r) => require.ensure([], () => r(require('./pages/Home')), 'home');
+
 const Alert = (r) => require.ensure([], () => r(require('./pages/components/Alert')), 'alert');
 const Badge = (r) => require.ensure([], () => r(require('./pages/components/Badge')), 'badge');
 const Breadcrumb = (r) => require.ensure([], () => r(require('./pages/components/Breadcrumb')), 'breadcrumb');
 const Button = (r) => require.ensure([], () => r(require('./pages/components/Button')), 'button');
 const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/components/ButtonGroup')), 'buttonGroup');
 const Card = (r) => require.ensure([], () => r(require('./pages/components/Card')), 'card');
+const Code = (r) => require.ensure([], () => r(require('./pages/components/Code')), 'code');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/Dropdown')), 'dropdown');
 const Forms = (r) => require.ensure([], () => r(require('./pages/components/Forms')), 'forms');
+const Grid = (r) => require.ensure([], () => r(require('./pages/components/Grid')), 'grid');
 const InputGroup = (r) => require.ensure([], () => r(require('./pages/components/InputGroup')), 'inputGroup');
 const Jumbotron = (r) => require.ensure([], () => r(require('./pages/components/Jumbotron')), 'jumbotron');
 const ListGroup = (r) => require.ensure([], () => r(require('./pages/components/ListGroup')), 'listGroup');
@@ -17,7 +21,13 @@ const Popovers = (r) => require.ensure([], () => r(require('./pages/components/P
 const Scrollspy = (r) => require.ensure([], () => r(require('./pages/components/Scrollspy')), 'scrollspy');
 const Progress = (r) => require.ensure([], () => r(require('./pages/components/Progress')), 'progress');
 
-const main = [];
+const main = [
+  {
+    path: '/',
+    name: 'main:home',
+    component: Home
+  }
+];
 
 const components = [
   {
@@ -51,6 +61,11 @@ const components = [
     component: Card
   },
   {
+    path: '/components/code',
+    name: 'components:code',
+    component: Code
+  },
+  {
     path: '/components/dropdown',
     name: 'components:dropdown',
     component: Dropdown
@@ -59,6 +74,11 @@ const components = [
     path: '/components/forms',
     name: 'components:forms',
     component: Forms
+  },
+  {
+    path: '/components/grid',
+    name: 'components:grid',
+    component: Grid
   },
   { path: '/components/inputgroup', name: 'components:inputgroup', component: InputGroup },
   { path: '/components/jumbotron', name: 'components:jumbotron', component: Jumbotron },

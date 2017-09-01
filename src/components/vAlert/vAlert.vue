@@ -8,68 +8,67 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      vStyle: {
-        type: String,
-        default: null
-      },
-      dismissible: {
-        type: Boolean,
-        default: false
-      },
-      show: {
-        type: Boolean,
-        default: true
+import common from '../../mixins/common.js';
+
+export default {
+  mixins: [common],
+  props: {
+    dismissible: {
+      type: Boolean,
+      default: false
+    },
+    show: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
+    return {
+      countDownTimerId: null,
+      dismissed: false
+    };
+  },
+  watch: {
+    show() {
+      this.changeShowStatus();
+    }
+  },
+  computed: {
+    className: function() {
+      switch (this.vStyle) {
+        case 'success':
+          return 'alert-success';
+        case 'info':
+          return 'alert-info';
+        case 'warning':
+          return 'alert-warning';
+        case 'danger':
+          return 'alert-danger';
+        case 'link':
+          return 'alert-link';
+        default:
       }
     },
-    data() {
-      return {
-        countDownTimerId: null,
-        dismissed: false
-      };
-    },
-    watch: {
-      show() {
-        this.changeShowStatus();
+    dismissibleClassName: function() {
+      if (this.dismissible) {
+        return 'alert-dismissible fade show';
       }
     },
-    computed: {
-      className: function() {
-        switch (this.vStyle) {
-          case 'success':
-            return 'alert-success';
-          case 'info':
-            return 'alert-info';
-          case 'warning':
-            return 'alert-warning';
-          case 'danger':
-            return 'alert-danger';
-          case 'link':
-            return 'alert-link';
-          default:
-        }
-      },
-      dismissibleClassName: function() {
-        if (this.dismissible) {
-          return 'alert-dismissible fade show';
-        }
-      },
-      pshow() {
-        return !this.dismissed && (this.countDownTimerId || this.show);
-      }
+    pshow() {
+      return !this.dismissed && (this.countDownTimerId || this.show);
+    }
+  },
+  methods: {
+    dismiss() {
+      this.dismissed = true;
+      this.$emit('dismissed-callback');
     },
-    methods: {
-      dismiss() {
-        this.dismissed = true;
-        this.$emit('dismissed-callback');
-      },
-      changeShowStatus() {
-        this.dismissed = false;
-        if (this.show === true || this.show === false || this.show === null || this.show === 0) {
-          return;
-        }
+    changeShowStatus() {
+      this.dismissed = false;
+      if (this.show === true || this.show === false || this.show === null || this.show === 0) {
+        return;
       }
     }
-  };
+  }
+};
 </script>

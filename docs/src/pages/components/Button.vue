@@ -3,22 +3,22 @@
     <h1>Buttons</h1>
     <div class="demoContainer">
       <v-button>Default</v-button>
-      <v-button btnStyle="primary">Primary</v-button>
-      <v-button btnStyle="secondary">Secondary</v-button>
-      <v-button btnStyle="success">Success</v-button>
-      <v-button btnStyle="info">Info</v-button>
-      <v-button btnStyle="warning">Warning</v-button>
-      <v-button btnStyle="danger">Danger</v-button>
-      <v-button btnStyle="link">Link</v-button>
+      <v-button vStyle="primary">Primary</v-button>
+      <v-button vStyle="secondary">Secondary</v-button>
+      <v-button vStyle="success">Success</v-button>
+      <v-button vStyle="info">Info</v-button>
+      <v-button vStyle="warning">Warning</v-button>
+      <v-button vStyle="danger">Danger</v-button>
+      <v-button vStyle="link">Link</v-button>
     </div>
 
     <div class="demoContainer">
-      <v-button btnStyle="primary" outline>Primary</v-button>
-      <v-button btnStyle="secondary" outline>Secondary</v-button>
-      <v-button btnStyle="success" outline>Success</v-button>
-      <v-button btnStyle="info" outline>Info</v-button>
-      <v-button btnStyle="warning" outline>Warning</v-button>
-      <v-button btnStyle="danger" outline>Danger</v-button>
+      <v-button vStyle="primary" outline>Primary</v-button>
+      <v-button vStyle="secondary" outline>Secondary</v-button>
+      <v-button vStyle="success" outline>Success</v-button>
+      <v-button vStyle="info" outline>Info</v-button>
+      <v-button vStyle="warning" outline>Warning</v-button>
+      <v-button vStyle="danger" outline>Danger</v-button>
     </div>
 
     <div class="demoContainer">
@@ -28,13 +28,13 @@
     </div>
 
     <div class="demoContainer">
-      <v-button type="type" btnStyle="primary" size="lg" block>Block level button</v-button>
-      <v-button type="type" btnStyle="secondary" size="lg" block>Block level button</v-button>
+      <v-button type="type" vStyle="primary" size="lg" block>Block level button</v-button>
+      <v-button type="type" vStyle="secondary" size="lg" block>Block level button</v-button>
     </div>
 
     <div class="demoContainer">
-      <v-button type="type" btnStyle="primary" size="lg" disabled>Primary button</v-button>
-      <v-button type="type" btnStyle="secondary" size="lg" disabled>Secondary button</v-button>
+      <v-button type="type" vStyle="primary" size="lg" disabled>Primary button</v-button>
+      <v-button type="type" vStyle="secondary" size="lg" disabled>Secondary button</v-button>
     </div>
   </div>
 </template>

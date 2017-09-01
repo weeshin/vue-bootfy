@@ -22,7 +22,7 @@
     </v-alert>
 
     <v-alert vStyle="success" :show="showAlert">Success show alert</v-alert>
-    <v-button btnStyle="info" @click="showAlertClick">show alert</v-button>
+    <v-button vStyle="info" @click="showAlertClick">show alert</v-button>
   </div>
 </template>
 <script>
