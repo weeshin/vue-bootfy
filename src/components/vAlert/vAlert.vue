@@ -36,6 +36,10 @@ export default {
   computed: {
     className: function() {
       switch (this.vStyle) {
+        case 'primary':
+          return 'alert-primary';
+        case 'secondary':
+          return 'alert-secondary';
         case 'success':
           return 'alert-success';
         case 'info':
@@ -44,8 +48,10 @@ export default {
           return 'alert-warning';
         case 'danger':
           return 'alert-danger';
-        case 'link':
-          return 'alert-link';
+        case 'light':
+          return 'alert-light';
+        case 'dark':
+          return 'alert-dark';
         default:
       }
     },

@@ -23,14 +23,14 @@ export default {
   },
   computed: {
     classnames: function() {
-      const allClassnames = [];
+      const classlist = [];
 
       if (this.right) {
-        allClassnames.push('navbar-toggler-right');
+        classlist.push('navbar-toggler-right');
       } else if (this.left) {
-        allClassnames.push('navbar-toggler-left');
+        classlist.push('navbar-toggler-left');
       }
-      return allClassnames;
+      return classlist;
     }
   }
 };

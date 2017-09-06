@@ -1,22 +1,12 @@
 <template>
   <div class="container-fluid">
-    <nav class="navbar navbar-toggleable-md navbar-expand-sm navbar-light bg-faded">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-      <!-- Brand -->
-      <a class="navbar-brand" href="#">Vue-Bootify</a>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="nav-content">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Document</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <v-nav-bar fixTop>
+      <v-nav-bar-toggler-button right></v-nav-bar-toggler-button>
+      <v-nav-bar-brand href="#">
+        <img src="/assets/bootstrap-solid.svg" width="30" height="30" alt="">
+        Vue-Bootify
+      </v-nav-bar-brand>
+    </v-nav-bar>
 
     <div class="row">
       <div class="col col-sm-10 col-md-10 ">

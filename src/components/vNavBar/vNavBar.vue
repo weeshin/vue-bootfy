@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['navbar', 'navbar-toggleable-md bg-faded', classname]">
+  <nav :class="['navbar', 'navbar-expand-lg', classname]">
     <slot></slot>
   </nav>
 </template>
@@ -26,23 +26,41 @@ export default {
   },
   computed: {
     classname: function() {
-      const allClassnames = [];
+      const classlist = [];
 
       if (this.inverse) {
-        allClassnames.push('navbar-inverse bg-inverse');
+        classlist.push('navbar-dark bg-dark');
       } else {
-        allClassnames.push('navbar-light');
+        classlist.push('navbar-light bg-light');
       }
 
       if (this.fixTop) {
-        allClassnames.push('fixed-top');
+        classlist.push('fixed-top');
       } else if (this.fixBottom) {
-        allClassnames.push('fixed-bottom');
+        classlist.push('fixed-bottom');
       } else if (this.stickyTop) {
-        allClassnames.push('sticky-top');
+        classlist.push('sticky-top');
       }
 
-      return allClassnames;
+      switch (this.size) {
+        case 'small':
+          classlist.push('navbar-expand-sm');
+          break;
+        case 'middle':
+          classlist.push('navbar-expand-md');
+          break;
+        case 'large':
+          classlist.push('navbar-expand-lg');
+          break;
+        case 'extra':
+          classlist.push('navbar-expand-xl');
+          break;
+        default:
+          classlist.push('navbar-expand-lg');
+      }
+      // justify-content-between
+
+      return classlist;
     }
   }
 };

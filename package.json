@@ -33,6 +33,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "popper.js": "^1.11.1",
+    "prismjs": "^1.6.0",
     "tether": "^1.4.0",
     "vue": "^2.4.1"
   },

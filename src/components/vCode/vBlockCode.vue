@@ -24,6 +24,14 @@ export default {
     code: String
   },
   methods: {
+    escapeHtml(unsafe) {
+      return unsafe
+             .replace(/&/g, '&amp;')
+             .replace(/</g, '&lt;')
+             .replace(/>/g, '&gt;')
+             .replace(/"/g, '&quot;')
+             .replace(/'/g, '&#039;');
+    },
     indentCode(codeContent) {
       let indent = detectIndent(codeContent).indent || '\t';
 
@@ -33,7 +41,13 @@ export default {
     init() {
       let codeElm = this.$refs['code-elm'];
 
-      codeElm.textContent = this.indentCode(codeElm.textContent);
+      codeElm.innerHTML = this.indentCode(codeElm.innerHTML);
+      codeElm.innerHTML = this.escapeHtml(codeElm.innerHTML);
+
+      console.log('element', codeElm);
+
+      // codeElm.textContent = this.indentCode(codeElm.textContent);
+
       hljs.highlightBlock(codeElm);
     }
   },
