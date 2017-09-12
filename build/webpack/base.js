@@ -58,7 +58,11 @@ export default {
           limit: 10000,
           name: '/assets/[name].[hash:8].[ext]'
         }
-      }
+      },
+      {
+        test: /\.md$/,
+        loader: 'raw-loader'
+      }      
     ]
   },
   plugins: [

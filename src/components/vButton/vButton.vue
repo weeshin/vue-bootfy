@@ -39,9 +39,14 @@ export default {
           return this.outline ? 'btn-outline-warning' : 'btn-warning';
         case 'danger':
           return this.outline ? 'btn-outline-danger' : 'btn-danger';
+        case 'light':
+          return this.outline ? 'btn-outline-light' : 'btn-light';
+        case 'dark':
+          return this.outline ? 'btn-outline-dark' : 'btn-dark';
         case 'link':
           return 'btn-link';
-        default:
+        default:        
+          return this.outline ? 'btn-outline-primary' : 'btn-primary';
       }
     },
     sizeClassName: function() {

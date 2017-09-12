@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['navbar', 'navbar-expand-lg', classname]">
+  <nav :class="['navbar', 'navbar-expand flex-column flex-md-row', classname]">
     <slot></slot>
   </nav>
 </template>

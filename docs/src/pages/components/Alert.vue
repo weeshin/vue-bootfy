@@ -163,55 +163,14 @@
     </example-container>
 
     <example-container>
-      <h2>Properties</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>Type</th>
-            <th>Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">dismissible</th>
-            <td>Boolean</td>
-            <td>false</td>
-          </tr>
-          <tr>
-            <th scope="row">show</th>
-            <td>Boolean</td>
-            <td>false</td>
-          </tr>
-          <tr>
-            <th scope="row">vStyle</th>
-            <td>String</td>
-            <td>[primary, secondary, success, info, warning, danger, light, dark]</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>Events</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Event</th>
-            <th>Arguments</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">dismissed-callback</th>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <div v-markdown="{ content: alertMd }">
+      </div>
     </example-container>
   </div>
 </template>
 <script>
 import exampleContainer from '../../components/ExampleContainer.vue';
+import AlertMd from './Alert.md';
 
 export default {
   components: {
@@ -219,7 +178,9 @@ export default {
   },
   data() {
     return {
-      showAlert: false
+      showAlert: false,
+      propertiesMd: "#header",
+      alertMd: AlertMd
     };
   },
   methods: {

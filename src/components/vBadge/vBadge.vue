@@ -20,16 +20,20 @@ export default {
       switch (this.vStyle) {
         case 'primary':
           return 'badge-primary';
+        case 'secondary':
+          return 'badge-secondary';
         case 'success':
           return 'badge-success';
-        case 'info':
-          return 'badge-info';
-        case 'warning':
-          return 'badge-warning';
         case 'danger':
           return 'badge-danger';
-        default:
-          return 'badge-default';
+        case 'warning':
+          return 'badge-warning';
+        case 'info':
+          return 'badge-info';
+        case 'light':
+          return 'badge-light';
+        case 'dark':
+          return 'badge-dark';
 
       }
     },
@@ -42,8 +46,8 @@ export default {
 </script>
 
 <style scoped>
-.badge {
+/*.badge {
   padding: 0.55em 0.4em;
   border-radius: 0.35rem;
-}
+}*/
 </style>

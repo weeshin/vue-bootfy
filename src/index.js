@@ -18,7 +18,7 @@ import vPagination from './components/vPagination';
 import vPopover from './components/vPopover';
 import vProgress from './components/vProgress';
 import vTooltips from './components/vTooltips';
-import AnnoyingBackground from './directives';
+import Directives from './directives';
 
 const options = {
   vAlert,
@@ -44,7 +44,7 @@ const options = {
 };
 
 const directives = {
-  AnnoyingBackground
+  Directives
 };
 
 options.install = (Vue) => {

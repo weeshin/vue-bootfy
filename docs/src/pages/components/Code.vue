@@ -25,5 +25,21 @@
       </html>
       </script>
     </v-code>
+
+
+    <div v-markdown="{ content: data }">
+    </div>
   </div>
 </template>
+
+<script>
+import c from './c.md';
+
+export default {
+  data() {
+    return {
+      data: c
+    }
+  }
+}
+</script>
