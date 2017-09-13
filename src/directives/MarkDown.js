@@ -17,7 +17,7 @@ export default {
     el.innerHTML = text;
     var elements = el.getElementsByTagName("table");
     for(var i=0; i<elements.length; i++) {
-      elements[i].classList.add('table');
+      elements[i].classList.add('table', 'table-striped', 'table-bordered', 'table-sm');
     }
   }
 }

@@ -1,8 +1,20 @@
 <template>
-  <div class="exampleContainer">
-    <slot></slot>
+  <div>
+    <h2 v-if="title">{{ title }}</h2>
+    <div class="exampleContainer">
+      <slot></slot>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    title: String,
+    default: null
+  }
+}
+</script>
 
 <style scoped>
 .exampleContainer {

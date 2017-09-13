@@ -169,7 +169,7 @@
   </div>
 </template>
 <script>
-import exampleContainer from '../../components/ExampleContainer.vue';
+import exampleContainer from '../../../components/ExampleContainer.vue';
 import AlertMd from './Alert.md';
 
 export default {

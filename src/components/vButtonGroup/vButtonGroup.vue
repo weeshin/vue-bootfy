@@ -44,9 +44,9 @@
       },
       sizeClass: function() {
         switch (this.size) {
-          case 'large':
+          case 'lg':
             return 'btn-group-lg';
-          case 'small':
+          case 'sm':
             return 'btn-group-sm';
           default:
         }

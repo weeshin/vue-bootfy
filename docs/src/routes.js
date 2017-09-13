@@ -1,10 +1,10 @@
 const Home = (r) => require.ensure([], () => r(require('./pages/Home')), 'home');
 
-const Alert = (r) => require.ensure([], () => r(require('./pages/components/Alert')), 'alert');
-const Badge = (r) => require.ensure([], () => r(require('./pages/components/Badge')), 'badge');
-const Breadcrumb = (r) => require.ensure([], () => r(require('./pages/components/Breadcrumb')), 'breadcrumb');
-const Button = (r) => require.ensure([], () => r(require('./pages/components/Button')), 'button');
-const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/components/ButtonGroup')), 'buttonGroup');
+const Alert = (r) => require.ensure([], () => r(require('./pages/components/alert/Alert')), 'alert');
+const Badge = (r) => require.ensure([], () => r(require('./pages/components/badge/Badge')), 'badge');
+const Breadcrumb = (r) => require.ensure([], () => r(require('./pages/components/breadcrumb/Breadcrumb')), 'breadcrumb');
+const Button = (r) => require.ensure([], () => r(require('./pages/components/button/Button')), 'button');
+const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/components/buttonGroup/ButtonGroup')), 'buttonGroup');
 const Card = (r) => require.ensure([], () => r(require('./pages/components/Card')), 'card');
 const Code = (r) => require.ensure([], () => r(require('./pages/components/Code')), 'code');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/Dropdown')), 'dropdown');

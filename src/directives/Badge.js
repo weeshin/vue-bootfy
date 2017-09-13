@@ -4,7 +4,7 @@ export default {
     let pill = binding.value.pill;
     (pill === true) ? el.classList.add('badge-pill') : null;
 
-    let style = binding.value.vstyle;
+    let style = binding.value.vStyle;
     switch(style) {
       case 'primary':
         el.classList.add('badge-primary');
