@@ -1,16 +1,71 @@
 <template>
   <div>
     <h1>Card</h1>
-    <v-card header="test card header">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </v-card>
 
-    <v-card>
-      <v-card-block>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </v-card-block>
-    </v-card>
+    <example-container title="Example">
+      <v-card style="width: 20rem;">
+        <v-card-img top src="/assets/imagecap318x180.svg" alt="Card image"></v-card-img>
+        <v-card-body>
+          <v-card-title size="h4">Card title</v-card-title>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </v-card-body>
+      </v-card>
+      <v-code>
+        <script type="text/plain">
+        <v-card style="width: 20rem;">
+          <v-card-img top src="/assets/imagecap318x180.svg" alt="Card image"></v-card-img>
+          <v-card-body>
+            <v-card-title size="h4">Card title</v-card-title>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </v-card-body>
+        </v-card>
+        </script>
+      </v-code>
+    </example-container>
+
+    <example-container title="Blocks">
+      <v-card>
+        <v-card-body>
+          This is some text within a card block.
+        </v-card-body>
+      </v-card>
+      <v-code>
+        <script type="text/plain">
+        <v-card>
+          <v-card-body>
+            This is some text within a card block.
+          </v-card-body>
+        </v-card>
+        </script>
+      </v-code>
+    </example-container>
+
+    <example-container title="Titles, text, and links">
+      <v-card style="width: 20rem;">
+        <v-card-body>
+          <v-card-title size="h4">Card title</v-card-title>
+          <div v-cardheader>div card subtitle</div>
+          <h6 v-cardheader>Card subtitle</h6>
+
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </v-card-body>
+      </v-card>
+      <v-code>
+        <script type="text/plain">
+        <v-card header="test card header" style="width: 20rem;">
+          <v-card-body>
+            <v-card-title size="h4">Card title</v-card-title>
+            <h6 v-cardheader>Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </v-card-body>
+        </v-card>
+        </script>
+      </v-code>
+    </example-container>
 
     <v-card>
       <v-card-header>
@@ -127,3 +182,18 @@
     </v-card>
   </div>
 </template>
+<script>
+import exampleContainer from '../../../components/ExampleContainer.vue';
+import CardMd from './Card.md';
+
+export default {
+  components: {
+    'example-container': exampleContainer
+  },
+  data() {
+    return {
+      cardMd: CardMd
+    }
+  }
+}
+</script>

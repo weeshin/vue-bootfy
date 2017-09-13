@@ -1,58 +1,55 @@
 <template>
   <div :class="['card', className, textCenterClassName, inverseClassName]">
-    <div class="card-block">
-        <div class="card-title" v-if='header'>{{ header }}</div>
-        <slot></slot>
-    </div>
-
+    <slot></slot>
   </div>
 </template>
 <script>
-  export default {
-    props: {
-      header: {
-        type: String,
-        default: null
-      },
-      textcenter: {
-        type: Boolean,
-        default: false
-      },
-      inverse: {
-        type: Boolean,
-        default: false
-      },
-      vStyle: {
-        type: String,
-        default: null
+import common from '../../mixins/common.js';
+
+export default {
+  mixins: [common],
+  props: {
+    textcenter: {
+      type: Boolean,
+      default: false
+    },
+    inverse: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    className: function() {
+      switch (this.vStyle) {
+        case 'primary':
+          return 'bg-primary text-white';
+        case 'secondary':
+          return 'bg-secondary text-white';
+        case 'success':
+          return 'bg-success text-white';
+        case 'danger':
+          return 'bg-danger text-white';
+        case 'warning':
+          return 'bg-warning text-white';
+        case 'info':
+          return 'bg-info text-white';
+        case 'light':
+          return 'bg-light';
+        case 'warning':
+          return 'bg-dark text-white';
+        default:
+          return null;
       }
     },
-    computed: {
-      className: function() {
-        switch (this.vStyle) {
-          case 'primary':
-            return 'card-primary';
-          case 'success':
-            return 'card-success';
-          case 'info':
-            return 'card-info';
-          case 'warning':
-            return 'card-warning';
-          case 'danger':
-            return 'card-danger';
-          default:
-            return null;
-        }
-      },
-      textCenterClassName: function() {
-        if (this.textcenter) {
-          return 'text-center';
-        }
-      },
-      inverseClassName: function() {
-        return this.inverse ? 'card-inverse' : null;
+    textCenterClassName: function() {
+      if (this.textcenter) {
+        return 'text-center';
       }
-
+    },
+    inverseClassName: function() {
+      return this.inverse ? 'card-inverse' : null;
     }
-  };
+
+  }
+};
 </script>

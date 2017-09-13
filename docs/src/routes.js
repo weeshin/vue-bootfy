@@ -5,7 +5,7 @@ const Badge = (r) => require.ensure([], () => r(require('./pages/components/badg
 const Breadcrumb = (r) => require.ensure([], () => r(require('./pages/components/breadcrumb/Breadcrumb')), 'breadcrumb');
 const Button = (r) => require.ensure([], () => r(require('./pages/components/button/Button')), 'button');
 const ButtonGroup = (r) => require.ensure([], () => r(require('./pages/components/buttonGroup/ButtonGroup')), 'buttonGroup');
-const Card = (r) => require.ensure([], () => r(require('./pages/components/Card')), 'card');
+const Card = (r) => require.ensure([], () => r(require('./pages/components/card/Card')), 'card');
 const Code = (r) => require.ensure([], () => r(require('./pages/components/Code')), 'code');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/Dropdown')), 'dropdown');
 const Forms = (r) => require.ensure([], () => r(require('./pages/components/Forms')), 'forms');

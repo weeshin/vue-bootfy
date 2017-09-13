@@ -1,6 +1,7 @@
 import vCard from './vCard.vue';
 import vCardBlock from './vCardBlock.vue';
 import vCardBlockquote from './vCardBlockquote.vue';
+import vCardBody from './vCardBody.vue';
 import vCardColumns from './vCardColumns.vue';
 import vCardDeck from './vCardDeck.vue';
 import vCardFooter from './vCardFooter.vue';
@@ -14,6 +15,7 @@ export default function install(Vue) {
   Vue.component('v-card', vCard);
   Vue.component('v-card-block', vCardBlock);
   Vue.component('v-card-blockquote', vCardBlockquote);
+  Vue.component('v-card-body', vCardBody);
   Vue.component('v-card-columns', vCardColumns);
   Vue.component('v-card-deck', vCardDeck);
   Vue.component('v-card-footer', vCardFooter);

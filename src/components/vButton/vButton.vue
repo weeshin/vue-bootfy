@@ -45,7 +45,7 @@ export default {
           return this.outline ? 'btn-outline-dark' : 'btn-dark';
         case 'link':
           return 'btn-link';
-        default:        
+        default:
           return this.outline ? 'btn-outline-primary' : 'btn-primary';
       }
     },
