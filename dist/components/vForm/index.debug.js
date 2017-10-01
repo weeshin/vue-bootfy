@@ -749,6 +749,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     domProps: {
       "value": _vm.value
+    },
+    on: {
+      "input": function($event) {
+        _vm.$emit('input', $event.target.value)
+      }
     }
   })]), _vm._v(" "), (_vm.feedback) ? _c('div', {
     staticClass: "form-control-feedback"
@@ -1021,6 +1026,12 @@ var _vFormGroup2 = _interopRequireDefault(_vFormGroup);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
 //
 //
 //

@@ -3454,6 +3454,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   mixins: [_form2.default],
@@ -27544,6 +27550,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     domProps: {
       "value": _vm.value
+    },
+    on: {
+      "input": function($event) {
+        _vm.$emit('input', $event.target.value)
+      }
     }
   })]), _vm._v(" "), (_vm.feedback) ? _c('div', {
     staticClass: "form-control-feedback"

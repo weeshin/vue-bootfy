@@ -6,8 +6,14 @@
       v-bind:readonly="readonly"></textarea>
 
     <div v-else :class="[colRightClass]">
-      <input :type="type" :class="[formControlClass, controlGroupSizeClass, feedbackControlClass]" :id="id" :aria-describedby="helpId" :placeholder="placeholder"
-        v-bind:readonly="readonly" :value="value">
+      <input :type="type" :class="[formControlClass, controlGroupSizeClass, feedbackControlClass]"
+             :id="id"
+             :aria-describedby="helpId"
+             :placeholder="placeholder"
+             :value="value"
+             v-bind:readonly="readonly"
+             @input="$emit('input', $event.target.value)"
+             >
     </div>
 
     <div v-if="feedback" class="form-control-feedback">{{ feedback.message }}</div>
