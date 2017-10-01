@@ -1,5 +1,5 @@
 /*!
-* Vue-Bootfy v0.0.2
+* Vue-Bootfy v0.0.3
 * Made with Nick Lim
 * Released under the MIT License.
 */   
