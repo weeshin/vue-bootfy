@@ -20,6 +20,8 @@ import vProgress from './components/vProgress';
 import vTooltips from './components/vTooltips';
 import Directives from './directives';
 
+import Prism from 'prismjs';
+
 const options = {
   vAlert,
   vBadge,
@@ -59,6 +61,12 @@ options.install = (Vue) => {
   for (let directive in directives) {
     Vue.use(directives[directive]);
   }
+
+  Vue.mixin({
+    mounted() {
+      Prism.highlightAll();
+    }
+  });
 };
 
 export default options;

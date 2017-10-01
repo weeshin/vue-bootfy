@@ -13,7 +13,7 @@
       {{title}}
     </button>
 
-    <div :class="['dropdown-menu', rightAlignClassName]">
+    <div :class="['dropdown-menu', show, rightAlignClassName]">
       <slot></slot>
     </div>
   </div>
@@ -71,21 +71,31 @@
         }
       },
       className: function() {
+        const classlist = [];
+        // classlist.push('dropdown-toggle');
+        console.log(this.vStyle);
+
         switch (this.vStyle) {
           case 'primary':
-            return 'btn-primary';
+            classlist.push('btn-primary');
+            break;
           case 'secondary':
-            return 'btn-secondary';
+            classlist.push('btn-secondary');
+            break;
           case 'success':
-            return 'btn-success';
+            classlist.push('btn-success');
+            break;
           case 'info':
-            return 'btn-info';
+            classlist.push('btn-info');
+            break;
           case 'warning':
-            return 'btn-warning';
+            classlist.push('btn-warning');
+            break;
           case 'danger':
-            return 'btn-danger';
-          default:
+            classlist.push('btn-danger');
+            break;
         }
+        return classlist;
       },
       sizeClassName: function() {
         if (this.size === 'sm') {

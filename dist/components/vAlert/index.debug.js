@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 107);
+/******/ 	return __webpack_require__(__webpack_require__.s = 376);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,15 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 107:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(3);
-
-
-/***/ }),
-
-/***/ 17:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -193,118 +185,27 @@ module.exports = __webpack_require__(3);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 exports.default = {
   props: {
     vStyle: {
       type: String,
       default: null
-    },
-    dismissible: {
-      type: Boolean,
-      default: false
-    },
-    show: {
-      type: Boolean,
-      default: true
-    }
-  },
-  data: function data() {
-    return {
-      countDownTimerId: null,
-      dismissed: false
-    };
-  },
-
-  watch: {
-    show: function show() {
-      this.changeShowStatus();
-    }
-  },
-  computed: {
-    className: function className() {
-      switch (this.vStyle) {
-        case 'success':
-          return 'alert-success';
-        case 'info':
-          return 'alert-info';
-        case 'warning':
-          return 'alert-warning';
-        case 'danger':
-          return 'alert-danger';
-        case 'link':
-          return 'alert-link';
-        default:
-      }
-    },
-    dismissibleClassName: function dismissibleClassName() {
-      if (this.dismissible) {
-        return 'alert-dismissible fade show';
-      }
-    },
-    pshow: function pshow() {
-      return !this.dismissed && (this.countDownTimerId || this.show);
-    }
-  },
-  methods: {
-    dismiss: function dismiss() {
-      this.dismissed = true;
-      this.$emit('dismissed-callback');
-    },
-    changeShowStatus: function changeShowStatus() {
-      this.dismissed = false;
-      if (this.show === true || this.show === false || this.show === null || this.show === 0) {
-        return;
-      }
     }
   }
 };
-module.exports = exports['default'];
+module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = install;
-
-var _vAlert = __webpack_require__(36);
-
-var _vAlert2 = _interopRequireDefault(_vAlert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function install(Vue) {
-  Vue.component('v-alert', _vAlert2.default);
-}
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ 36:
+/***/ 254:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(17),
+  __webpack_require__(29),
   /* template */
-  __webpack_require__(90),
+  __webpack_require__(346),
   /* styles */
   null,
   /* scopeId */
@@ -312,7 +213,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vAlert/vAlert.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vAlert/vAlert.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vAlert.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -337,7 +238,190 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 90:
+/***/ 255:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(30),
+  /* template */
+  __webpack_require__(336),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vAlert/vAlertLink.vue"
+if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vAlertLink.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4fc95500", Component.options)
+  } else {
+    hotAPI.reload("data-v-4fc95500", Component.options)
+  }
+  module.hot.dispose((function (data) {
+    disposed = true
+  }))
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 29:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = __webpack_require__(1);
+
+var _common2 = _interopRequireDefault(_common);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  mixins: [_common2.default],
+  props: {
+    dismissible: {
+      type: Boolean,
+      default: false
+    },
+    show: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data: function data() {
+    return {
+      countDownTimerId: null,
+      dismissed: false
+    };
+  },
+
+  watch: {
+    show: function show() {
+      this.changeShowStatus();
+    }
+  },
+  computed: {
+    className: function className() {
+      switch (this.vStyle) {
+        case 'primary':
+          return 'alert-primary';
+        case 'secondary':
+          return 'alert-secondary';
+        case 'success':
+          return 'alert-success';
+        case 'info':
+          return 'alert-info';
+        case 'warning':
+          return 'alert-warning';
+        case 'danger':
+          return 'alert-danger';
+        case 'light':
+          return 'alert-light';
+        case 'dark':
+          return 'alert-dark';
+        default:
+      }
+    },
+    dismissibleClassName: function dismissibleClassName() {
+      if (this.dismissible) {
+        return 'alert-dismissible fade show';
+      }
+    },
+    pshow: function pshow() {
+      return !this.dismissed && (this.countDownTimerId || this.show);
+    }
+  },
+  methods: {
+    dismiss: function dismiss() {
+      this.dismissed = true;
+      this.$emit('dismissed-callback');
+    },
+    changeShowStatus: function changeShowStatus() {
+      this.dismissed = false;
+      if (this.show === true || this.show === false || this.show === null || this.show === 0) {
+        return;
+      }
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 30:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    href: null
+  }
+};
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ 336:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('a', {
+    staticClass: "alert-link",
+    attrs: {
+      "href": _vm.href
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4fc95500", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 346:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -369,6 +453,43 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-67663534", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 376:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(7);
+
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vAlert = __webpack_require__(254);
+
+var _vAlert2 = _interopRequireDefault(_vAlert);
+
+var _vAlertLink = __webpack_require__(255);
+
+var _vAlertLink2 = _interopRequireDefault(_vAlertLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-alert', _vAlert2.default);
+  Vue.component('v-alert-link', _vAlertLink2.default);
+}
+module.exports = exports['default'];
 
 /***/ })
 

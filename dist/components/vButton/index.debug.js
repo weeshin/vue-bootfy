@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 110);
+/******/ 	return __webpack_require__(__webpack_require__.s = 379);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,15 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 110:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(6);
-
-
-/***/ }),
-
-/***/ 20:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -193,89 +185,51 @@ module.exports = __webpack_require__(6);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-
 exports.default = {
   props: {
-    btnStyle: {
+    vStyle: {
       type: String,
       default: null
-    },
-    size: {
-      type: String,
-      default: null
-    },
-    block: {
-      type: Boolean,
-      default: false
-    },
-    outline: {
-      type: Boolean,
-      defaul: false
-    }
-  },
-  computed: {
-    className: function className() {
-      switch (this.btnStyle) {
-        case 'primary':
-          return this.outline ? 'btn-outline-primary' : 'btn-primary';
-        case 'secondary':
-          return this.outline ? 'btn-outline-secondary' : 'btn-secondary';
-        case 'success':
-          return this.outline ? 'btn-outline-success' : 'btn-success';
-        case 'info':
-          return this.outline ? 'btn-outline-info' : 'btn-info';
-        case 'warning':
-          return this.outline ? 'btn-outline-warning' : 'btn-warning';
-        case 'danger':
-          return this.outline ? 'btn-outline-danger' : 'btn-danger';
-        case 'link':
-          return 'btn-link';
-        default:
-      }
-    },
-    sizeClassName: function sizeClassName() {
-      if (this.size === 'sm') {
-        return 'btn-sm';
-      }
-      if (this.size === 'md') {
-        return 'btn-md';
-      }
-      if (this.size === 'lg') {
-        return 'btn-lg';
-      }
-    },
-    blockClassName: function blockClassName() {
-      if (this.block) {
-        return 'btn-block';
-      }
-    }
-  },
-  methods: {
-    onClick: function onClick(e) {
-      this.$emit('click', e);
     }
   }
 };
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vButton = __webpack_require__(258);
+
+var _vButton2 = _interopRequireDefault(_vButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-button', _vButton2.default);
+}
 module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 39:
+/***/ 258:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(20),
+  __webpack_require__(33),
   /* template */
-  __webpack_require__(81),
+  __webpack_require__(331),
   /* styles */
   null,
   /* scopeId */
@@ -283,7 +237,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vButton/vButton.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vButton/vButton.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vButton.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -308,7 +262,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 6:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -317,22 +271,89 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = install;
 
-var _vButton = __webpack_require__(39);
+var _common = __webpack_require__(1);
 
-var _vButton2 = _interopRequireDefault(_vButton);
+var _common2 = _interopRequireDefault(_common);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function install(Vue) {
-  Vue.component('v-button', _vButton2.default);
-}
+exports.default = {
+  mixins: [_common2.default],
+  props: {
+    size: {
+      type: String,
+      default: null
+    },
+    block: {
+      type: Boolean,
+      default: false
+    },
+    outline: {
+      type: Boolean,
+      defaul: false
+    }
+  },
+  computed: {
+    className: function className() {
+      switch (this.vStyle) {
+        case 'primary':
+          return this.outline ? 'btn-outline-primary' : 'btn-primary';
+        case 'secondary':
+          return this.outline ? 'btn-outline-secondary' : 'btn-secondary';
+        case 'success':
+          return this.outline ? 'btn-outline-success' : 'btn-success';
+        case 'info':
+          return this.outline ? 'btn-outline-info' : 'btn-info';
+        case 'warning':
+          return this.outline ? 'btn-outline-warning' : 'btn-warning';
+        case 'danger':
+          return this.outline ? 'btn-outline-danger' : 'btn-danger';
+        case 'light':
+          return this.outline ? 'btn-outline-light' : 'btn-light';
+        case 'dark':
+          return this.outline ? 'btn-outline-dark' : 'btn-dark';
+        case 'link':
+          return 'btn-link';
+        default:
+          return this.outline ? 'btn-outline-primary' : 'btn-primary';
+      }
+    },
+    sizeClassName: function sizeClassName() {
+      if (this.size === 'sm') {
+        return 'btn-sm';
+      }
+      if (this.size === 'md') {
+        return 'btn-md';
+      }
+      if (this.size === 'lg') {
+        return 'btn-lg';
+      }
+    },
+    blockClassName: function blockClassName() {
+      if (this.block) {
+        return 'btn-block';
+      }
+    }
+  },
+  methods: {
+    onClick: function onClick(e) {
+      this.$emit('click', e);
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+//
+
 module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 81:
+/***/ 331:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -350,6 +371,14 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-4a690410", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 379:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(10);
+
 
 /***/ })
 

@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 117);
+/******/ 	return __webpack_require__(__webpack_require__.s = 388);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 11:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,66 +187,33 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vInputGroup = __webpack_require__(63);
+var _vInputGroup = __webpack_require__(290);
 
 var _vInputGroup2 = _interopRequireDefault(_vInputGroup);
+
+var _vInputGroupBtn = __webpack_require__(291);
+
+var _vInputGroupBtn2 = _interopRequireDefault(_vInputGroupBtn);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function install(Vue) {
   Vue.component('v-input-group', _vInputGroup2.default);
+  Vue.component('v-input-group-btn', _vInputGroupBtn2.default);
 }
 module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 117:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(11);
-
-
-/***/ }),
-
-/***/ 32:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: {}
-};
-module.exports = exports["default"];
-
-/***/ }),
-
-/***/ 63:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(32),
+  __webpack_require__(51),
   /* template */
-  __webpack_require__(91),
+  null,
   /* styles */
   null,
   /* scopeId */
@@ -254,9 +221,8 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vInputGroup/vInputGroup.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vInputGroup/vInputGroup.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] vInputGroup.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -279,21 +245,126 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 91:
+/***/ 291:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(325),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vInputGroup/vInputGroupBtn.vue"
+if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vInputGroupBtn.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3fdd136e", Component.options)
+  } else {
+    hotAPI.reload("data-v-3fdd136e", Component.options)
+  }
+  module.hot.dispose((function (data) {
+    disposed = true
+  }))
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 325:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "input-group"
-  }, [_vm._t("left"), _vm._v(" "), _vm._t("default"), _vm._v(" "), _vm._t("right")], 2)
+    staticClass: "input-group-btn"
+  }, [_vm._t("default")], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-73ea303e", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-3fdd136e", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 388:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(17);
+
+
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+
+exports.default = {
+  name: 'v-input-group',
+  props: {},
+  mounted: function mounted() {
+    console.log('mounted');
+  },
+  updated: function updated() {
+    console.log('updated');
+    var children = this.$slots.left;
+
+    children.forEach((function (vNode) {
+      if (vNode && vNode.child) {
+        console.log(vNode.child.tag);
+      }
+    }));
+  },
+
+  render: function render(h) {
+
+    var left = this.$slots.left;
+    var center = this.$slots.default;
+    var right = this.$slots.right;
+
+    var nodes = [];
+
+    if (left) {
+      nodes.push(h('div', { class: 'input-group-addon' }, left));
+    }
+    if (center) {
+      nodes.push(center);
+    }
+    if (right) {
+      console.log(right);
+      nodes.push(h('div', { class: 'input-group-addon' }, right));
+    }
+
+    return h('div', {
+      class: 'input-group'
+    }, nodes);
+  }
+};
+module.exports = exports['default'];
 
 /***/ })
 

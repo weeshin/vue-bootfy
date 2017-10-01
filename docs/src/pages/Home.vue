@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>Main page</h1>
+    <h1>Vue Bootify</h1>
   </div>
 </template>

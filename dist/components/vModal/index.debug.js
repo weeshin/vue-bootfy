@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 120);
+/******/ 	return __webpack_require__(__webpack_require__.s = 391);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 12:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vModal = __webpack_require__(64);
+var _vModal = __webpack_require__(295);
 
 var _vModal2 = _interopRequireDefault(_vModal);
 
@@ -200,23 +200,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 120:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(12);
-
-
-/***/ }),
-
-/***/ 64:
+/***/ 295:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  null,
+  __webpack_require__(55),
   /* template */
-  __webpack_require__(84),
+  __webpack_require__(335),
   /* styles */
   null,
   /* scopeId */
@@ -224,7 +216,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vModal/vModal.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vModal/vModal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vModal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -249,14 +241,18 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 84:
+/***/ 335:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "modal fade"
+    staticClass: "modal fade",
+    attrs: {
+      "id": "myModal",
+      "tabindex": "-1",
+      "role": "dialog",
+      "aria-labelledby": "myModalLabel"
+    }
   }, [_c('div', {
     staticClass: "modal-dialog",
     attrs: {
@@ -264,7 +260,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "modal-content"
-  }, [_c('div', {
+  }, [_vm._t("modal-header", [_c('div', {
     staticClass: "modal-header"
   }, [_c('h5', {
     staticClass: "modal-title"
@@ -274,14 +270,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "data-dismiss": "modal",
       "aria-label": "Close"
+    },
+    on: {
+      "click": _vm.close
     }
   }, [_c('span', {
     attrs: {
       "aria-hidden": "true"
     }
-  }, [_vm._v("×")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("×")])])])]), _vm._v(" "), _vm._t("modal-body", [_c('div', {
     staticClass: "modal-body"
-  }, [_c('p', [_vm._v("Modal body text goes here.")])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _vm._t("modal-footer", [_c('div', {
     staticClass: "modal-footer"
   }, [_c('button', {
     staticClass: "btn btn-primary",
@@ -293,9 +292,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "button",
       "data-dismiss": "modal"
+    },
+    on: {
+      "click": _vm.close
     }
-  }, [_vm._v("Close")])])])])])
-}]}
+  }, [_vm._v("Close")])])])], 2)])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -303,6 +305,71 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-4f168846", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 391:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(20);
+
+
+/***/ }),
+
+/***/ 55:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  methods: {
+    show: function show() {
+      var el = this.$el;
+
+      el.style.display = 'block';
+      el.classList.add('show');
+      console.log('show');
+    },
+    close: function close() {
+      var el = this.$el;
+
+      el.style.display = null;
+      el.classList.remove('show');
+    }
+  }
+};
+module.exports = exports['default'];
 
 /***/ })
 

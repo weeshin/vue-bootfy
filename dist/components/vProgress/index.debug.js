@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 125);
+/******/ 	return __webpack_require__(__webpack_require__.s = 396);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,15 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 125:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(15);
-
-
-/***/ }),
-
-/***/ 15:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -195,7 +187,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vProgress = __webpack_require__(67);
+var _vProgress = __webpack_require__(309);
 
 var _vProgress2 = _interopRequireDefault(_vProgress);
 
@@ -208,61 +200,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 34:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: {
-    max: {
-      type: Number,
-      default: 100
-    },
-    min: {
-      type: Number,
-      default: 0
-    },
-    now: {
-      type: Number,
-      default: 0
-    }
-  },
-  computed: {
-    styleClass: function styleClass() {
-      return 'width: ' + this.now + '%';
-    }
-  }
-};
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ 67:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(34),
+  __webpack_require__(67),
   /* template */
-  __webpack_require__(74),
+  __webpack_require__(317),
   /* styles */
   null,
   /* scopeId */
@@ -270,7 +216,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vProgress/vProgress.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vProgress/vProgress.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vProgress.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -295,14 +241,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 74:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "progress"
   }, [_c('div', {
-    staticClass: "progress-bar",
+    class: ['progress-bar', _vm.classList],
     style: (_vm.styleClass),
     attrs: {
       "role": "progressbar",
@@ -310,7 +256,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "aria-valuemin": _vm.min,
       "aria-valuemax": _vm.max
     }
-  })])
+  }, [_vm._v("\n    " + _vm._s(_vm.progressText) + "\n  ")])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -319,6 +265,148 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-2127c324", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 396:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(25);
+
+
+/***/ }),
+
+/***/ 67:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    vStyle: {
+      type: String,
+      default: null
+    },
+    stripe: {
+      type: Boolean,
+      default: false
+    },
+    animate: {
+      type: Boolean,
+      default: false
+    },
+    max: {
+      type: Number,
+      default: 100
+    },
+    min: {
+      type: Number,
+      default: 0
+    },
+    now: {
+      type: Number,
+      default: 0
+    },
+    showLabel: {
+      type: Boolean,
+      default: false
+    },
+    height: {
+      type: Number,
+      default: 20
+    },
+    interval: {
+      type: Number,
+      default: 1000
+    }
+  },
+  data: function data() {
+    return {
+      progressText: '',
+      current: this.now
+    };
+  },
+
+  computed: {
+    classList: function classList() {
+      var classList = [];
+
+      switch (this.vStyle) {
+        case 'success':
+          classList.push('bg-success');
+          break;
+        case 'info':
+          classList.push('bg-info');
+          break;
+        case 'warning':
+          classList.push('bg-warning');
+          break;
+        case 'danger':
+          classList.push('bg-danger');
+          break;
+        default:
+      }
+
+      if (this.stripe) {
+        classList.push('progress-bar-striped');
+      }
+
+      if (this.animate) {
+        classList.push('progress-bar-animated');
+      }
+
+      return classList;
+    },
+    styleClass: function styleClass() {
+      return 'width: ' + this.current + '%; ' + 'height: ' + this.height + 'px;';
+    }
+  },
+  watch: {
+    current: function current() {
+      if (this.current >= this.max) {
+        clearInterval(this.$data._process);
+        console.log('clearInterval');
+      }
+      this.$data.progressText = this.current + '%';
+    }
+  },
+  methods: {
+    start: function start() {
+      var _this = this;
+
+      this.$data._process = setInterval((function () {
+        if (_this.current >= _this.max) {
+          _this.current = 0;
+        }
+        _this.current += 1;
+        console.log(_this.current);
+      }), this.interval);
+    }
+  },
+  mounted: function mounted() {
+    if (this.$data._process) {
+      clearInterval(this.$data._process);
+    }
+  }
+};
+module.exports = exports['default'];
 
 /***/ })
 

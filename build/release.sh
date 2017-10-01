@@ -28,18 +28,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   npm run lint
 
   # generate old docs tree
-  PACKAGE_VERSION=$(get_package_version)
-  cp -Rf dist/docs/releases tmp-releases
-  cp -Rf dist/docs tmp-releases/v$PACKAGE_VERSION
-  rm -Rf tmp-releases/v$PACKAGE_VERSION/releases
+  #PACKAGE_VERSION=$(get_package_version)
+  #cp -Rf dist/docs/releases tmp-releases
+  #cp -Rf dist/docs tmp-releases/v$PACKAGE_VERSION
+  #rm -Rf tmp-releases/v$PACKAGE_VERSION/releases
 
   # append version
-  sed -i '' -e "s|\"]|\", \"$VERSION\"]|g" docs/versions.json
+  #sed -i '' -e "s|\"]|\", \"$VERSION\"]|g" docs/versions.json
 
   # build
   VERSION=$VERSION npm run build
-  cp -Rf tmp-releases dist/docs/releases
-  rm -Rf tmp-releases
+  #cp -Rf tmp-releases dist/docs/releases
+  #rm -Rf tmp-releases
 
   # commit
   git add -A
@@ -53,7 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # deploy
   if [ "`git remote| grep site`" == "site" ] ; then
     git remote remove site
-  fi  
+  fi
 
   npm publish
 fi

@@ -1,8 +1,8 @@
 <template>
-  <ul v-if="ul" class="list-group">
+  <ul v-if="ul" class="list-group list-group-flush">
     <slot></slot>
   </ul>
-  <div v-else class="list-group">
+  <div v-else class="list-group list-group-flush">
     <slot></slot>
   </div>
 </template>

@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 119);
+/******/ 	return __webpack_require__(__webpack_require__.s = 390);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 103:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,28 +187,33 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vListGroup = __webpack_require__(105);
+var _vListGroup = __webpack_require__(293);
 
 var _vListGroup2 = _interopRequireDefault(_vListGroup);
+
+var _vListGroupItem = __webpack_require__(294);
+
+var _vListGroupItem2 = _interopRequireDefault(_vListGroupItem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function install(Vue) {
   Vue.component('v-list-group', _vListGroup2.default);
+  Vue.component('v-list-group-item', _vListGroupItem2.default);
 }
 module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 105:
+/***/ 293:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  null,
+  __webpack_require__(53),
   /* template */
-  __webpack_require__(106),
+  __webpack_require__(315),
   /* styles */
   null,
   /* scopeId */
@@ -216,7 +221,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vListGroup/vListGroup.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vListGroup/vListGroup.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vListGroup.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -241,26 +246,57 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 106:
+/***/ 294:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(54),
+  /* template */
+  __webpack_require__(343),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vListGroup/vListGroupItem.vue"
+if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vListGroupItem.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5ea22779", Component.options)
+  } else {
+    hotAPI.reload("data-v-5ea22779", Component.options)
+  }
+  module.hot.dispose((function (data) {
+    disposed = true
+  }))
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 315:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('ul', {
-    staticClass: "list-group"
-  }, [_c('li', {
-    staticClass: "list-group-item"
-  }, [_vm._v("Cras justo odio")]), _vm._v(" "), _c('li', {
-    staticClass: "list-group-item"
-  }, [_vm._v("Dapibus ac facilisis in")]), _vm._v(" "), _c('li', {
-    staticClass: "list-group-item"
-  }, [_vm._v("Morbi leo risus")]), _vm._v(" "), _c('li', {
-    staticClass: "list-group-item"
-  }, [_vm._v("Porta ac consectetur ac")]), _vm._v(" "), _c('li', {
-    staticClass: "list-group-item"
-  }, [_vm._v("Vestibulum at eros")])])
-}]}
+  return (_vm.ul) ? _c('ul', {
+    staticClass: "list-group list-group-flush"
+  }, [_vm._t("default")], 2) : _c('div', {
+    staticClass: "list-group list-group-flush"
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -271,11 +307,156 @@ if (false) {
 
 /***/ }),
 
-/***/ 119:
+/***/ 343:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(103);
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return (_vm.anchor) ? _c('a', {
+    class: ['list-group-item', _vm.vStyleClassname, _vm.activeClassname, _vm.disabledClassname, _vm.hoverClassname, _vm.justifyClassname]
+  }, [_vm._t("default")], 2) : (_vm.button) ? _c('button', {
+    class: ['list-group-item', _vm.vStyleClassname, _vm.activeClassname, _vm.disabledClassname, _vm.hoverClassname, _vm.justifyClassname]
+  }, [_vm._t("default")], 2) : _c('li', {
+    class: ['list-group-item', _vm.vStyleClassname, _vm.activeClassname, _vm.disabledClassname, _vm.hoverClassname, _vm.justifyClassname]
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5ea22779", module.exports)
+  }
+}
 
+/***/ }),
+
+/***/ 390:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(19);
+
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    ul: {
+      type: Boolean,
+      default: false
+    }
+  }
+};
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ 54:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    vStyle: {
+      type: String,
+      default: null
+    },
+    active: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    hover: {
+      type: Boolean,
+      default: false
+    },
+    justify: {
+      type: Boolean,
+      default: false
+    },
+    anchor: {
+      type: Boolean,
+      default: false
+    },
+    button: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    vStyleClassname: function vStyleClassname() {
+      switch (this.vStyle) {
+        case 'success':
+          return 'list-group-item-success';
+        case 'info':
+          return 'list-group-item-info';
+        case 'warning':
+          return 'list-group-item-warning';
+        case 'danger':
+          return 'list-group-item-danger';
+        default:
+      }
+    },
+    activeClassname: function activeClassname() {
+      if (this.active) {
+        return 'active';
+      }
+    },
+    disabledClassname: function disabledClassname() {
+      if (this.disabled) {
+        return 'disabled';
+      }
+    },
+    hoverClassname: function hoverClassname() {
+      if (this.hover) {
+        return 'list-group-item-action';
+      }
+    },
+    justifyClassname: function justifyClassname() {
+      if (this.justify) {
+        return 'justify-content-between';
+      }
+    }
+  }
+};
+module.exports = exports['default'];
 
 /***/ })
 

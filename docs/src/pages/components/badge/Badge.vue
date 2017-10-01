@@ -12,15 +12,14 @@
       <v-badge vStyle="dark">Dark</v-badge>
 
       <v-code>
-        <script type="text/plain">
-        <v-badge vStyle="primary">Primary</v-badge>
-        <v-badge vStyle="secondary">Secondary</v-badge>
-        <v-badge vStyle="success">Success</v-badge>
-        <v-badge vStyle="danger">Danger</v-badge>
-        <v-badge vStyle="warning">Warning</v-badge>
-        <v-badge vStyle="info">Info</v-badge>
-        <v-badge vStyle="light">Light</v-badge>
-        <v-badge vStyle="dark">Dark</v-badge>
+        <script type="text/plain"><v-badge vStyle="primary">Primary</v-badge>
+<v-badge vStyle="secondary">Secondary</v-badge>
+<v-badge vStyle="success">Success</v-badge>
+<v-badge vStyle="danger">Danger</v-badge>
+<v-badge vStyle="warning">Warning</v-badge>
+<v-badge vStyle="info">Info</v-badge>
+<v-badge vStyle="light">Light</v-badge>
+<v-badge vStyle="dark">Dark</v-badge>
         </script>
       </v-code>
     </example-container>

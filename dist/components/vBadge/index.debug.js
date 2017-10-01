@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 108);
+/******/ 	return __webpack_require__(__webpack_require__.s = 377);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,15 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 108:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(4);
-
-
-/***/ }),
-
-/***/ 18:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -193,72 +185,31 @@ module.exports = __webpack_require__(4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-
 exports.default = {
   props: {
     vStyle: {
       type: String,
       default: null
-    },
-    pill: {
-      type: Boolean,
-      default: false
     }
-  },
-  computed: {
-    className: function className() {
-      switch (this.vStyle) {
-        case 'primary':
-          return 'badge-primary';
-        case 'success':
-          return 'badge-success';
-        case 'info':
-          return 'badge-info';
-        case 'warning':
-          return 'badge-warning';
-        case 'danger':
-          return 'badge-danger';
-        default:
-          return 'badge-default';
-
-      }
-    },
-    pillClass: function pillClass() {
-      return this.pill ? 'badge-pill' : null;
-    }
-
   }
 };
-module.exports = exports['default'];
+module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 35:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 37:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(35)
+  __webpack_require__(69)
 }
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(18),
+  __webpack_require__(31),
   /* template */
-  __webpack_require__(72),
+  __webpack_require__(314),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -266,7 +217,7 @@ var Component = __webpack_require__(0)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/home/nicklim/IdeaProjects/vue-bootfy/src/components/vBadge/vBadge.vue"
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vBadge/vBadge.vue"
 if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] vBadge.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -291,7 +242,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 4:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -300,22 +251,60 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = install;
 
-var _vBadge = __webpack_require__(37);
+var _common = __webpack_require__(1);
 
-var _vBadge2 = _interopRequireDefault(_vBadge);
+var _common2 = _interopRequireDefault(_common);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function install(Vue) {
-  Vue.component('v-badge', _vBadge2.default);
-}
+exports.default = {
+  mixins: [_common2.default],
+  props: {
+    pill: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    className: function className() {
+      switch (this.vStyle) {
+        case 'primary':
+          return 'badge-primary';
+        case 'secondary':
+          return 'badge-secondary';
+        case 'success':
+          return 'badge-success';
+        case 'danger':
+          return 'badge-danger';
+        case 'warning':
+          return 'badge-warning';
+        case 'info':
+          return 'badge-info';
+        case 'light':
+          return 'badge-light';
+        case 'dark':
+          return 'badge-dark';
+
+      }
+    },
+    pillClass: function pillClass() {
+      return this.pill ? 'badge-pill' : null;
+    }
+
+  }
+}; //
+//
+//
+//
+//
+//
+
 module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 72:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -330,6 +319,45 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-11a20786", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 377:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+
+/***/ 69:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vBadge = __webpack_require__(256);
+
+var _vBadge2 = _interopRequireDefault(_vBadge);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-badge', _vBadge2.default);
+}
+module.exports = exports['default'];
 
 /***/ })
 

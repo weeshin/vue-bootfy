@@ -13,9 +13,9 @@ export default {
     }
   },
   destroyed() {
-    if(!this[RL]) {
-      this[RL].forEach( {event, callback} => this.$root.$off(event, callback));
-      this[RL] = [];
-    }
+    // if(!this[RL]) {
+    //   this[RL].forEach( {event, callback} => this.$root.$off(event, callback));
+    //   this[RL] = [];
+    // }
   }
 }
