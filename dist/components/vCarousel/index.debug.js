@@ -73,12 +73,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 382);
+/******/ 	return __webpack_require__(__webpack_require__.s = 386);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 382:
+/***/ 386:
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackMissingModule() { throw new Error("Cannot find module \"./src/components/vCarousel\""); }());

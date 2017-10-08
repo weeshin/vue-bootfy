@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 393);
+/******/ 	return __webpack_require__(__webpack_require__.s = 397);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,19 +187,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vNavBar = __webpack_require__(303);
+var _vNavBar = __webpack_require__(306);
 
 var _vNavBar2 = _interopRequireDefault(_vNavBar);
 
-var _vNavBarBrand = __webpack_require__(304);
+var _vNavBarBrand = __webpack_require__(307);
 
 var _vNavBarBrand2 = _interopRequireDefault(_vNavBarBrand);
 
-var _vNavBarItem = __webpack_require__(305);
+var _vNavBarItem = __webpack_require__(308);
 
 var _vNavBarItem2 = _interopRequireDefault(_vNavBarItem);
 
-var _vNavBarTogglerButton = __webpack_require__(306);
+var _vNavBarTogglerButton = __webpack_require__(309);
 
 var _vNavBarTogglerButton2 = _interopRequireDefault(_vNavBarTogglerButton);
 
@@ -215,15 +215,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 303:
+/***/ 306:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(61),
+  __webpack_require__(63),
   /* template */
-  __webpack_require__(360),
+  __webpack_require__(364),
   /* styles */
   null,
   /* scopeId */
@@ -256,15 +256,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 304:
+/***/ 307:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(62),
+  __webpack_require__(64),
   /* template */
-  __webpack_require__(330),
+  __webpack_require__(333),
   /* styles */
   null,
   /* scopeId */
@@ -297,15 +297,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 305:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(63),
+  __webpack_require__(65),
   /* template */
-  __webpack_require__(322),
+  __webpack_require__(325),
   /* styles */
   null,
   /* scopeId */
@@ -338,15 +338,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 306:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(64),
+  __webpack_require__(66),
   /* template */
-  __webpack_require__(334),
+  __webpack_require__(337),
   /* styles */
   null,
   /* scopeId */
@@ -379,7 +379,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 322:
+/***/ 325:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -408,7 +408,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 330:
+/***/ 333:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -430,7 +430,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 334:
+/***/ 337:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -458,7 +458,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 360:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -476,15 +476,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 393:
+/***/ 397:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(22);
+module.exports = __webpack_require__(23);
 
 
 /***/ }),
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -563,7 +563,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 62:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -594,7 +594,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 63:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -681,7 +681,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 64:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

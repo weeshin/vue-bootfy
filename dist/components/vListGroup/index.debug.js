@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 390);
+/******/ 	return __webpack_require__(__webpack_require__.s = 394);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 19:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,11 +187,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vListGroup = __webpack_require__(293);
+var _vListGroup = __webpack_require__(296);
 
 var _vListGroup2 = _interopRequireDefault(_vListGroup);
 
-var _vListGroupItem = __webpack_require__(294);
+var _vListGroupItem = __webpack_require__(297);
 
 var _vListGroupItem2 = _interopRequireDefault(_vListGroupItem);
 
@@ -205,15 +205,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 293:
+/***/ 296:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(53),
+  __webpack_require__(55),
   /* template */
-  __webpack_require__(315),
+  __webpack_require__(318),
   /* styles */
   null,
   /* scopeId */
@@ -246,15 +246,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 294:
+/***/ 297:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(54),
+  __webpack_require__(56),
   /* template */
-  __webpack_require__(343),
+  __webpack_require__(346),
   /* styles */
   null,
   /* scopeId */
@@ -287,7 +287,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 315:
+/***/ 318:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -307,7 +307,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 343:
+/***/ 346:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -329,15 +329,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 390:
+/***/ 394:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(19);
+module.exports = __webpack_require__(20);
 
 
 /***/ }),
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -368,7 +368,7 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 54:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

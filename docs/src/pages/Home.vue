@@ -1,5 +1,9 @@
 <template>
   <div>
-    <h1>Vue Bootify</h1>
+    <legend>Installation</legend>
+    <div>
+      <p>vue-bootfy has been published in npm</p>
+      <code>npm install vue-bootfy</code>
+    </div>
   </div>
 </template>

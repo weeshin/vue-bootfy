@@ -10,38 +10,13 @@
 
       <v-form-input id="exampleInputPassword1"
         label="Password"
-        type="password" placeholder="Password" description="Enter password"></v-form-input>
+        type="password" placeholder="Password" description="Enter password"
+        v-model="form1.password"></v-form-input>
 
-      <v-form-select id="exampleSelect1"
-        label="Example select">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </v-form-select>
-
-      <v-form-select id="exampleSelect2"
-        label="Example multiple select" multiple>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </v-form-select>
-
-      <v-form-input id="exampleTextarea"
-        label="Example textarea"
-        description="Enter textarea" textarea></v-form-input>
-
-      <v-form-input id="exampleInputEmail1"
-        label="File input"
-        type="file"  description="This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line."></v-form-input>
-
-      <v-form-radio label="Radio buttons" :items="radioOptions">
-      </v-form-radio>
-
-      <v-form-check label="Check me out"></v-form-check>
+      <v-form-check label="Check me out" v-model="form1.checkMe" ></v-form-check>
+      <v-form-radio v-model="form1.radioMe">Radio 1</v-form-radio>
+      <v-form-radio v-model="form1.radioMe">Radio 2</v-form-radio>
+      <v-form-radio v-model="form1.radioMe">Radio 3</v-form-radio>
       <v-button type="submit" btnStyle="primary" @click="onSubmit">Submit</v-button>
     </example-container>
 
@@ -166,6 +141,7 @@ export default {
   },
   methods: {
     onSubmit: function() {
+      // alert(this.form1);
       console.log('form 1', this.form1);
     }
   }

@@ -9,6 +9,7 @@ const Card = (r) => require.ensure([], () => r(require('./pages/components/card/
 const Code = (r) => require.ensure([], () => r(require('./pages/components/code/Code')), 'code');
 const Dropdown = (r) => require.ensure([], () => r(require('./pages/components/dropdown/Dropdown')), 'dropdown');
 const Forms = (r) => require.ensure([], () => r(require('./pages/components/forms/Forms')), 'forms');
+const FormRadio = (r) => require.ensure([], () => r(require('./pages/components/forms/FormRadio')), 'formRadio');
 const Grid = (r) => require.ensure([], () => r(require('./pages/components/grid/Grid')), 'grid');
 const InputGroup = (r) => require.ensure([], () => r(require('./pages/components/inputGroup/InputGroup')), 'inputGroup');
 const Jumbotron = (r) => require.ensure([], () => r(require('./pages/components/jumbotron/Jumbotron')), 'jumbotron');
@@ -74,6 +75,11 @@ const components = [
     path: '/components/forms',
     name: 'components:forms',
     component: Forms
+  },
+  {
+    path: '/components/formradio',
+    name: 'components:formradio',
+    component: FormRadio
   },
   {
     path: '/components/grid',

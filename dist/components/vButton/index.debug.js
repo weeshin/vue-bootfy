@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 379);
+/******/ 	return __webpack_require__(__webpack_require__.s = 383);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -197,7 +197,7 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 10:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -208,7 +208,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vButton = __webpack_require__(258);
+var _vButton = __webpack_require__(260);
 
 var _vButton2 = _interopRequireDefault(_vButton);
 
@@ -221,15 +221,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 258:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(33),
+  __webpack_require__(34),
   /* template */
-  __webpack_require__(331),
+  __webpack_require__(334),
   /* styles */
   null,
   /* scopeId */
@@ -262,7 +262,28 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 33:
+/***/ 334:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('button', {
+    class: ['btn', _vm.className, _vm.sizeClassName, _vm.blockClassName],
+    on: {
+      "click": _vm.onClick
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4a690410", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -353,31 +374,10 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 331:
+/***/ 383:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('button', {
-    class: ['btn', _vm.className, _vm.sizeClassName, _vm.blockClassName],
-    on: {
-      "click": _vm.onClick
-    }
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4a690410", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 379:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(11);
 
 
 /***/ })

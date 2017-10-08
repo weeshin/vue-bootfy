@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 395);
+/******/ 	return __webpack_require__(__webpack_require__.s = 399);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vPopover = __webpack_require__(308);
+var _vPopover = __webpack_require__(311);
 
 var _vPopover2 = _interopRequireDefault(_vPopover);
 
@@ -200,7 +200,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 253:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4.0 */
@@ -2022,15 +2022,15 @@ return Tether;
 
 /***/ }),
 
-/***/ 308:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(66),
+  __webpack_require__(68),
   /* template */
-  __webpack_require__(355),
+  __webpack_require__(359),
   /* styles */
   null,
   /* scopeId */
@@ -2063,7 +2063,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 355:
+/***/ 359:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2094,15 +2094,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 395:
+/***/ 399:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(24);
+module.exports = __webpack_require__(25);
 
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2112,7 +2112,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tether = __webpack_require__(253);
+var _tether = __webpack_require__(255);
 
 var _tether2 = _interopRequireDefault(_tether);
 

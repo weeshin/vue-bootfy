@@ -24,6 +24,7 @@
             <a class="list-group-item list-group-item-action" href="/#/components/code">Code</a>
             <a class="list-group-item list-group-item-action" href="/#/components/dropdown">Dropdown</a>
             <a class="list-group-item list-group-item-action" href="/#/components/forms">Forms</a>
+            <a class="list-group-item list-group-item-action" href="/#/components/formradio">FormRadio</a>
             <a class="list-group-item list-group-item-action" href="/#/components/grid">Grid</a>
             <a class="list-group-item list-group-item-action" href="/#/components/inputgroup">InputGroup</a>
             <a class="list-group-item list-group-item-action" href="/#/components/jumbotron">Jumbotron</a>

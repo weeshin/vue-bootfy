@@ -4,6 +4,7 @@ import vFormCheck from './vFormCheck.vue';
 import vFormGroup from './vFormGroup.vue';
 import vFormInput from './vFormInput.vue';
 import vFormRadio from './vFormRadio.vue';
+import vFormRadioGroup from './vFormRadioGroup';
 import vFormSelect from './vFormSelect.vue';
 import vInput from './vInput.vue';
 
@@ -14,6 +15,7 @@ export default function install(Vue) {
   Vue.component('v-form-group', vFormGroup);
   Vue.component('v-form-input', vFormInput);
   Vue.component('v-form-radio', vFormRadio);
+  Vue.component('v-form-radio-group', vFormRadioGroup);
   Vue.component('v-form-select', vFormSelect);
   Vue.component('v-input', vInput);
 }

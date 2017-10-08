@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 394);
+/******/ 	return __webpack_require__(__webpack_require__.s = 398);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vPagination = __webpack_require__(307);
+var _vPagination = __webpack_require__(310);
 
 var _vPagination2 = _interopRequireDefault(_vPagination);
 
@@ -200,15 +200,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 307:
+/***/ 310:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(65),
+  __webpack_require__(67),
   /* template */
-  __webpack_require__(311),
+  __webpack_require__(314),
   /* styles */
   null,
   /* scopeId */
@@ -241,7 +241,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 311:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -327,15 +327,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 394:
+/***/ 398:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(23);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
 
-/***/ 65:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

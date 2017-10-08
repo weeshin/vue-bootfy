@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 378);
+/******/ 	return __webpack_require__(__webpack_require__.s = 382);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,15 +176,39 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 257:
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = install;
+
+var _vBreadcrumb = __webpack_require__(259);
+
+var _vBreadcrumb2 = _interopRequireDefault(_vBreadcrumb);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function install(Vue) {
+  Vue.component('v-breadcrumb', _vBreadcrumb2.default);
+}
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 259:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(32),
+  __webpack_require__(33),
   /* template */
-  __webpack_require__(344),
+  __webpack_require__(347),
   /* styles */
   null,
   /* scopeId */
@@ -217,7 +241,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -250,7 +274,7 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 344:
+/***/ 347:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -279,35 +303,11 @@ if (false) {
 
 /***/ }),
 
-/***/ 378:
+/***/ 382:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(9);
+module.exports = __webpack_require__(10);
 
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = install;
-
-var _vBreadcrumb = __webpack_require__(257);
-
-var _vBreadcrumb2 = _interopRequireDefault(_vBreadcrumb);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function install(Vue) {
-  Vue.component('v-breadcrumb', _vBreadcrumb2.default);
-}
-module.exports = exports['default'];
 
 /***/ })
 

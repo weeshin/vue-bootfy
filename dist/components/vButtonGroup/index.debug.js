@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 380);
+/******/ 	return __webpack_require__(__webpack_require__.s = 384);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 11:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,11 +187,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vButtonGroup = __webpack_require__(259);
+var _vButtonGroup = __webpack_require__(261);
 
 var _vButtonGroup2 = _interopRequireDefault(_vButtonGroup);
 
-var _vVerticalButtonGroup = __webpack_require__(260);
+var _vVerticalButtonGroup = __webpack_require__(262);
 
 var _vVerticalButtonGroup2 = _interopRequireDefault(_vVerticalButtonGroup);
 
@@ -205,15 +205,15 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 259:
+/***/ 261:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(34),
+  __webpack_require__(35),
   /* template */
-  __webpack_require__(357),
+  __webpack_require__(361),
   /* styles */
   null,
   /* scopeId */
@@ -246,7 +246,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 260:
+/***/ 262:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -254,7 +254,7 @@ var Component = __webpack_require__(0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(358),
+  __webpack_require__(362),
   /* styles */
   null,
   /* scopeId */
@@ -287,7 +287,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -355,7 +355,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 357:
+/***/ 361:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -377,7 +377,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 358:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -399,10 +399,10 @@ if (false) {
 
 /***/ }),
 
-/***/ 380:
+/***/ 384:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(11);
+module.exports = __webpack_require__(12);
 
 
 /***/ })

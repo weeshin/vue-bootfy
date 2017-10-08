@@ -1,23 +1,47 @@
 <template>
-  <fieldset class="form-group">
-    <legend>{{ label }}</legend>
-    <div :class="['form-check', disabledClassname(item.disabled)]" v-for="item in items">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" :id="item.id" :value="item.value" v-bind:checked="item.checked" v-bind:disabled="item.disabled">
-        {{ item.label }}
-      </label>
-    </div>
-  </fieldset>
+
+  <div :class="['form-check', inlineClassname]">
+    <label class="form-check-label" @click="handleClick">
+      <input :id="id"
+             :value="value"
+             :name="name"
+             type="radio"
+             class="form-check-input"
+             autocomplete="off"
+             :checked="checked"
+             @click="handleClick"
+             @change="handleChange">
+      <slot></slot>
+    </label>
+  </div>
+
 </template>
 
 <script>
-import form from '../../mixins/form.js';
+import radioMixin from '../../mixins/formRadioCheck.js';
 
 export default {
-  mixins: [form],
+  mixins: [radioMixin],
   props: {
-    items: {
-      type: Array
+    name: {
+      type: String,
+      default: null
+    },
+    inline: {
+      type: Boolean,
+      default: null
+    }
+  },
+  data() {
+    return {
+      inputValue: this.value
+    }
+  },
+  computed: {
+    inlineClassname() {
+      if(this.inline) {
+        return 'form-check-inline';
+      }
     }
   },
   methods: {
@@ -25,6 +49,15 @@ export default {
       if (disabled) {
         return 'disabled';
       }
+    },
+    handleClick: {
+
+    },
+    handleChange: function() {
+      console.log(this.inputValue);
+      this.$emit('change', this.inputValue);
+      this.$parent.$emit('change', this.inputValue);
+      this.$parent.$emit('input', this.inputValue);
     }
   }
 };

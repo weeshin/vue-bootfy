@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 386);
+/******/ 	return __webpack_require__(__webpack_require__.s = 390);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,7 +176,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 15:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,35 +187,39 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = install;
 
-var _vForm = __webpack_require__(282);
+var _vForm = __webpack_require__(284);
 
 var _vForm2 = _interopRequireDefault(_vForm);
 
-var _vFieldset = __webpack_require__(281);
+var _vFieldset = __webpack_require__(283);
 
 var _vFieldset2 = _interopRequireDefault(_vFieldset);
 
-var _vFormCheck = __webpack_require__(283);
+var _vFormCheck = __webpack_require__(285);
 
 var _vFormCheck2 = _interopRequireDefault(_vFormCheck);
 
-var _vFormGroup = __webpack_require__(3);
+var _vFormGroup = __webpack_require__(4);
 
 var _vFormGroup2 = _interopRequireDefault(_vFormGroup);
 
-var _vFormInput = __webpack_require__(284);
+var _vFormInput = __webpack_require__(286);
 
 var _vFormInput2 = _interopRequireDefault(_vFormInput);
 
-var _vFormRadio = __webpack_require__(285);
+var _vFormRadio = __webpack_require__(287);
 
 var _vFormRadio2 = _interopRequireDefault(_vFormRadio);
 
-var _vFormSelect = __webpack_require__(286);
+var _vFormRadioGroup = __webpack_require__(288);
+
+var _vFormRadioGroup2 = _interopRequireDefault(_vFormRadioGroup);
+
+var _vFormSelect = __webpack_require__(289);
 
 var _vFormSelect2 = _interopRequireDefault(_vFormSelect);
 
-var _vInput = __webpack_require__(287);
+var _vInput = __webpack_require__(290);
 
 var _vInput2 = _interopRequireDefault(_vInput);
 
@@ -228,6 +232,7 @@ function install(Vue) {
   Vue.component('v-form-group', _vFormGroup2.default);
   Vue.component('v-form-input', _vFormInput2.default);
   Vue.component('v-form-radio', _vFormRadio2.default);
+  Vue.component('v-form-radio-group', _vFormRadioGroup2.default);
   Vue.component('v-form-select', _vFormSelect2.default);
   Vue.component('v-input', _vInput2.default);
 }
@@ -343,7 +348,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 281:
+/***/ 283:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -351,7 +356,7 @@ var Component = __webpack_require__(0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(341),
+  __webpack_require__(344),
   /* styles */
   null,
   /* scopeId */
@@ -384,15 +389,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 282:
+/***/ 284:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(44),
+  __webpack_require__(45),
   /* template */
-  __webpack_require__(329),
+  __webpack_require__(332),
   /* styles */
   null,
   /* scopeId */
@@ -425,15 +430,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 283:
+/***/ 285:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(45),
+  __webpack_require__(46),
   /* template */
-  __webpack_require__(312),
+  __webpack_require__(315),
   /* styles */
   null,
   /* scopeId */
@@ -466,15 +471,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 284:
+/***/ 286:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(47),
+  __webpack_require__(48),
   /* template */
-  __webpack_require__(338),
+  __webpack_require__(341),
   /* styles */
   null,
   /* scopeId */
@@ -507,15 +512,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 285:
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(48),
+  __webpack_require__(49),
   /* template */
-  __webpack_require__(356),
+  __webpack_require__(360),
   /* styles */
   null,
   /* scopeId */
@@ -548,15 +553,56 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 286:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(0)(
   /* script */
-  __webpack_require__(49),
+  __webpack_require__(50),
   /* template */
   __webpack_require__(352),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vForm/vFormRadioGroup.vue"
+if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vFormRadioGroup.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6df04a80", Component.options)
+  } else {
+    hotAPI.reload("data-v-6df04a80", Component.options)
+  }
+  module.hot.dispose((function (data) {
+    disposed = true
+  }))
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(51),
+  /* template */
+  __webpack_require__(356),
   /* styles */
   null,
   /* scopeId */
@@ -589,7 +635,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 287:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -597,7 +643,7 @@ var Component = __webpack_require__(0)(
   /* script */
   null,
   /* template */
-  __webpack_require__(364),
+  __webpack_require__(368),
   /* styles */
   null,
   /* scopeId */
@@ -633,45 +679,32 @@ module.exports = Component.exports
 /***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-var disposed = false
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(46),
-  /* template */
-  __webpack_require__(362),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vForm/vFormGroup.vue"
-if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] vFormGroup.vue: functional components are not supported with templates, they should use render functions.")}
+"use strict";
 
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d4623f9a", Component.options)
-  } else {
-    hotAPI.reload("data-v-d4623f9a", Component.options)
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: {
+    id: {},
+    value: {},
+    checked: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data: function data() {
+    return {
+      localChecked: this.checked
+    };
   }
-  module.hot.dispose((function (data) {
-    disposed = true
-  }))
-})()}
-
-module.exports = Component.exports
-
+};
+module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 312:
+/***/ 315:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -683,6 +716,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "form-check-input",
     attrs: {
       "type": "checkbox"
+    },
+    domProps: {
+      "checked": _vm.checked
+    },
+    on: {
+      "change": _vm.change
     }
   }), _vm._v("\n    " + _vm._s(_vm.label) + "\n  ")])])
 },staticRenderFns: []}
@@ -696,7 +735,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 329:
+/***/ 332:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -714,7 +753,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 338:
+/***/ 341:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -774,7 +813,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 341:
+/***/ 344:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -793,6 +832,22 @@ if (false) {
 /***/ }),
 
 /***/ 352:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6df04a80", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -818,31 +873,34 @@ if (false) {
 
 /***/ }),
 
-/***/ 356:
+/***/ 360:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('fieldset', {
-    staticClass: "form-group"
-  }, [_c('legend', [_vm._v(_vm._s(_vm.label))]), _vm._v(" "), _vm._l((_vm.items), (function(item) {
-    return _c('div', {
-      class: ['form-check', _vm.disabledClassname(item.disabled)]
-    }, [_c('label', {
-      staticClass: "form-check-label"
-    }, [_c('input', {
-      staticClass: "form-check-input",
-      attrs: {
-        "type": "radio",
-        "name": "optionsRadios",
-        "id": item.id,
-        "disabled": item.disabled
-      },
-      domProps: {
-        "value": item.value,
-        "checked": item.checked
-      }
-    }), _vm._v("\n      " + _vm._s(item.label) + "\n    ")])])
-  }))], 2)
+  return _c('div', {
+    class: ['form-check', _vm.inlineClassname]
+  }, [_c('label', {
+    staticClass: "form-check-label",
+    on: {
+      "click": _vm.handleClick
+    }
+  }, [_c('input', {
+    staticClass: "form-check-input",
+    attrs: {
+      "id": _vm.id,
+      "name": _vm.name,
+      "type": "radio",
+      "autocomplete": "off"
+    },
+    domProps: {
+      "value": _vm.value,
+      "checked": _vm.checked
+    },
+    on: {
+      "click": _vm.handleClick,
+      "change": _vm.handleChange
+    }
+  }), _vm._v(" "), _vm._t("default")], 2)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -854,7 +912,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 362:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -872,7 +930,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 364:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -890,15 +948,56 @@ if (false) {
 
 /***/ }),
 
-/***/ 386:
+/***/ 390:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(15);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
 
-/***/ 44:
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(47),
+  /* template */
+  __webpack_require__(366),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/nicklim/vue-projects/vue-bootfy/src/components/vForm/vFormGroup.vue"
+if (Component.esModule && Object.keys(Component.esModule).some((function (key) {return key !== "default" && key.substr(0, 2) !== "__"}))) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vFormGroup.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d4623f9a", Component.options)
+  } else {
+    hotAPI.reload("data-v-d4623f9a", Component.options)
+  }
+  module.hot.dispose((function (data) {
+    disposed = true
+  }))
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -944,7 +1043,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -953,28 +1052,53 @@ module.exports = exports['default'];
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-//
+
+var _formRadioCheck = __webpack_require__(3);
+
+var _formRadioCheck2 = _interopRequireDefault(_formRadioCheck);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
+  mixins: [_formRadioCheck2.default],
   props: {
     label: {
       type: String,
       default: null
+    },
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data: function data() {
+    return {
+      checked: this.value
+    };
+  },
+
+  methods: {
+    change: function change() {
+      this.checked = !this.checked;
+      this.$emit('input', this.checked);
     }
   }
-};
-module.exports = exports["default"];
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1006,7 +1130,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1020,7 +1144,7 @@ var _form = __webpack_require__(2);
 
 var _form2 = _interopRequireDefault(_form);
 
-var _vFormGroup = __webpack_require__(3);
+var _vFormGroup = __webpack_require__(4);
 
 var _vFormGroup2 = _interopRequireDefault(_vFormGroup);
 
@@ -1095,7 +1219,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1105,17 +1229,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _form = __webpack_require__(2);
+var _formRadioCheck = __webpack_require__(3);
 
-var _form2 = _interopRequireDefault(_form);
+var _formRadioCheck2 = _interopRequireDefault(_formRadioCheck);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  mixins: [_form2.default],
+  mixins: [_formRadioCheck2.default],
   props: {
-    items: {
-      type: Array
+    name: {
+      type: String,
+      default: null
+    },
+    inline: {
+      type: Boolean,
+      default: null
+    }
+  },
+  data: function data() {
+    return {
+      inputValue: this.value
+    };
+  },
+
+  computed: {
+    inlineClassname: function inlineClassname() {
+      if (this.inline) {
+        return 'form-check-inline';
+      }
     }
   },
   methods: {
@@ -1123,9 +1265,23 @@ exports.default = {
       if (disabled) {
         return 'disabled';
       }
+    },
+    handleClick: {},
+    handleChange: function handleChange() {
+      console.log(this.inputValue);
+      this.$emit('change', this.inputValue);
+      this.$parent.$emit('change', this.inputValue);
+      this.$parent.$emit('input', this.inputValue);
     }
   }
 }; //
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1142,7 +1298,44 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 49:
+/***/ 50:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _formRadioCheck = __webpack_require__(3);
+
+var _formRadioCheck2 = _interopRequireDefault(_formRadioCheck);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  watch: {
+    checked: function checked(newVal, oldVal) {
+      this.localChecked = this.checked;
+    },
+    localChecked: function localChecked(newVal, oldVal) {
+      this.$emit('input', newVal);
+    }
+  },
+  methods: {}
+}; //
+//
+//
+//
+//
+//
+
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1156,7 +1349,7 @@ var _form = __webpack_require__(2);
 
 var _form2 = _interopRequireDefault(_form);
 
-var _vFormGroup = __webpack_require__(3);
+var _vFormGroup = __webpack_require__(4);
 
 var _vFormGroup2 = _interopRequireDefault(_vFormGroup);
 
