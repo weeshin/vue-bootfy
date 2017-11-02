@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 402);
+/******/ 	return __webpack_require__(__webpack_require__.s = 403);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -28500,11 +28500,11 @@ var _vTooltips = __webpack_require__(27);
 
 var _vTooltips2 = _interopRequireDefault(_vTooltips);
 
-var _directives = __webpack_require__(378);
+var _directives = __webpack_require__(379);
 
 var _directives2 = _interopRequireDefault(_directives);
 
-var _prismjs = __webpack_require__(379);
+var _prismjs = __webpack_require__(380);
 
 var _prismjs2 = _interopRequireDefault(_prismjs);
 
@@ -28648,6 +28648,48 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
+  bind: function bind(el, binding) {
+    el.classList.add('btn');
+    var style = el.getAttribute('vStyle');
+    var outline = el.hasAttribute('outline');
+
+    var btnStyle = "btn-" + style;
+    if (outline) {
+      btnStyle = "btn-outline-" + style;
+    }
+    el.classList.add(btnStyle);
+
+    // button size
+    var size = el.getAttribute('size');
+    if (size === 'lg' || size === 'sm') {
+      el.classList.add('btn-' + size);
+    }
+
+    // block level
+    var block = el.hasAttribute('block');
+    if (block) {
+      el.classList.add('btn-block');
+    }
+
+    var active = el.hasAttribute('active');
+    if (active) {
+      el.classList.add('active');
+    }
+  }
+};
+module.exports = exports['default'];
+
+/***/ }),
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
   bind: function bind(el) {
     el.classList.add('card-subtitle', 'mb-2', 'text-muted');
   }
@@ -28655,7 +28697,7 @@ exports.default = {
 module.exports = exports['default'];
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28690,7 +28732,7 @@ exports.default = {
 module.exports = exports['default'];
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28735,7 +28777,7 @@ exports.default = {
 module.exports = exports['default'];
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28754,15 +28796,19 @@ var _Badge = __webpack_require__(374);
 
 var _Badge2 = _interopRequireDefault(_Badge);
 
-var _CardHeader = __webpack_require__(375);
+var _Button = __webpack_require__(375);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _CardHeader = __webpack_require__(376);
 
 var _CardHeader2 = _interopRequireDefault(_CardHeader);
 
-var _ScrollSpy = __webpack_require__(377);
+var _ScrollSpy = __webpack_require__(378);
 
 var _ScrollSpy2 = _interopRequireDefault(_ScrollSpy);
 
-var _MarkDown = __webpack_require__(376);
+var _MarkDown = __webpack_require__(377);
 
 var _MarkDown2 = _interopRequireDefault(_MarkDown);
 
@@ -28771,6 +28817,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function install(Vue) {
   Vue.directive('annoying-background', _AnnoyingBackground2.default);
   Vue.directive('badge', _Badge2.default);
+  Vue.directive('button', _Button2.default);
   Vue.directive('cardheader', _CardHeader2.default);
   Vue.directive('scrollspy', _ScrollSpy2.default);
   Vue.directive('markdown', _MarkDown2.default);
@@ -28778,7 +28825,7 @@ function install(Vue) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -29580,7 +29627,6 @@ Prism.languages.js = Prism.languages.javascript;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 380 */,
 /* 381 */,
 /* 382 */,
 /* 383 */,
@@ -29602,7 +29648,8 @@ Prism.languages.js = Prism.languages.javascript;
 /* 399 */,
 /* 400 */,
 /* 401 */,
-/* 402 */
+/* 402 */,
+/* 403 */
 /***/ ((function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(372);
