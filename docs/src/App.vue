@@ -3,7 +3,7 @@
     <v-nav-bar stickyTop>
       <v-nav-bar-toggler-button right></v-nav-bar-toggler-button>
       <v-nav-bar-brand href="#">
-        <img src="/assets/bootstrap-solid.svg" width="30" height="30" alt="">
+        <img src="assets/bootstrap-solid.svg" width="30" height="30" alt="Vue-Bootify">
         Vue-Bootify
       </v-nav-bar-brand>
     </v-nav-bar>
@@ -15,27 +15,69 @@
         </div>
         <div class="col col-sm-2 col-md-2 doc-sidebar">
           <ul class="list-group">
-            <a class="list-group-item list-group-item-action" href="/#/components/alert">Alerts</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/badge">Badges</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/breadcrumb">Breadcrumb</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/button">Buttons</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/button-group">Button Group</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/card">Card</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/code">Code</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/dropdown">Dropdown</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/forms">Forms</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/formradio">FormRadio</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/grid">Grid</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/inputgroup">InputGroup</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/jumbotron">Jumbotron</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/listgroup">ListGroup</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/modal">Modal</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/nav">Nav</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/navbar">NavBar</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/pagination">Pagination</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/popovers">Popovers</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/progress">Progress</a>
-            <a class="list-group-item list-group-item-action" href="/#/components/scrollspy">Scrollspy</a>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/alert">Alerts</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/badge">Badges</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/breadcrumb">Breadcrumb</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/button">Buttons</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/button-group">Button Group</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/card">Card</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/code">Code</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/dropdown">Dropdown</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/forms">Forms</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/formradio">FormRadio</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/grid">Grid</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/inputgroup">InputGroup</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/jumbotron">Jumbotron</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/listgroup">ListGroup</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/modal">Modal</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/nav">Nav</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/navbar">NavBar</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/pagination">Pagination</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/popovers">Popovers</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/progress">Progress</router-link>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <router-link exact to="/components/scrollspy">Scrollspy</router-link>
+            </li>
           </ul>
         </div>
       </div>

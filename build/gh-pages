@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -x -e
+
+# Fetch gh-pages
+cd dist/docs
+git init
+git remote add origin git@github.com:weeshin/vue-bootfy-github.io.git
+git fetch origin
+
+# Commit new docs
+git add --all
+git commit -m "Update Docs"
+git push -ff origin master

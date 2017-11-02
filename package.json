@@ -28,6 +28,7 @@
     "build:lib": "babel-node build/server/build-lib.js --presets es2015,stage-0",
     "build": "rm -rf dist && npm run build:docs && npm run build:lib",
     "lint": "eslint --ext .js,.vue --fix src",
+    "docs-publish": "bash build/gh-pages",
     "release": "bash build/release.sh"
   },
   "dependencies": {

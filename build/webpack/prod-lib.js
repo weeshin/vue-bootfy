@@ -22,8 +22,7 @@ const componentsPath = 'src/components';
 const components = getDirectories(path.resolve(__dirname, '../../', componentsPath));
 
 baseConfig.entry = {
-  'vue-bootfy': ['./src/index.js'],
-  'components/mdCore/index': ['./src/core']
+  'vue-bootfy': ['./src/index.js']  
 };
 
 components.forEach((component) => {

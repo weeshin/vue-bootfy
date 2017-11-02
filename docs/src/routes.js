@@ -31,99 +31,27 @@ const main = [
 ];
 
 const components = [
-  {
-    path: '/components/alert',
-    name: 'components:alert',
-    component: Alert
-  },
-  {
-    path: '/components/badge',
-    name: 'components:badge',
-    component: Badge
-  },
-  {
-    path: '/components/breadcrumb',
-    name: 'components:breadcrumb',
-    component: Breadcrumb
-  },
-  {
-    path: '/components/button',
-    name: 'components:button',
-    component: Button
-  },
-  {
-    path: '/components/button-group',
-    name: 'components:buttonGroup',
-    component: ButtonGroup
-  },
-  {
-    path: '/components/card',
-    name: 'components:card',
-    component: Card
-  },
-  {
-    path: '/components/code',
-    name: 'components:code',
-    component: Code
-  },
-  {
-    path: '/components/dropdown',
-    name: 'components:dropdown',
-    component: Dropdown
-  },
-  {
-    path: '/components/forms',
-    name: 'components:forms',
-    component: Forms
-  },
-  {
-    path: '/components/formradio',
-    name: 'components:formradio',
-    component: FormRadio
-  },
-  {
-    path: '/components/grid',
-    name: 'components:grid',
-    component: Grid
-  },
+  { path: '/components/alert', name: 'components:alert', component: Alert },
+  { path: '/components/badge', name: 'components:badge', component: Badge },
+  { path: '/components/breadcrumb', name: 'components:breadcrumb', component: Breadcrumb },
+  { path: '/components/button', name: 'components:button', component: Button },
+  { path: '/components/button-group', name: 'components:buttonGroup', component: ButtonGroup },
+  { path: '/components/card', name: 'components:card', component: Card },
+  { path: '/components/code', name: 'components:code', component: Code },
+  { path: '/components/dropdown', name: 'components:dropdown', component: Dropdown },
+  { path: '/components/forms', name: 'components:forms', component: Forms },
+  { path: '/components/formradio', name: 'components:formradio', component: FormRadio},
+  { path: '/components/grid', name: 'components:grid', component: Grid},
   { path: '/components/inputgroup', name: 'components:inputgroup', component: InputGroup },
   { path: '/components/jumbotron', name: 'components:jumbotron', component: Jumbotron },
   { path: '/components/listgroup', name: 'components:listgroup', component: ListGroup },
-  {
-    path: '/components/modal',
-    name: 'components:modal',
-    component: Modal
-  },
-  {
-    path: '/components/nav',
-    name: 'components:nav',
-    component: Nav
-  },
-  {
-    path: '/components/navbar',
-    name: 'components:navbar',
-    component: NavBar
-  },
-  {
-    path: '/components/pagination',
-    name: 'components:pagination',
-    component: Pagination
-  },
-  {
-    path: '/components/popovers',
-    name: 'components:popovers',
-    component: Popovers
-  },
-  {
-    path: '/components/scrollspy',
-    name: 'components:scrollspy',
-    component: Scrollspy
-  },
-  {
-    path: '/components/progress',
-    name: 'components:progress',
-    component: Progress
-  }
+  { path: '/components/modal', name: 'components:modal', component: Modal },
+  { path: '/components/nav', name: 'components:nav', component: Nav },
+  { path: '/components/navbar', name: 'components:navbar', component: NavBar },
+  { path: '/components/pagination', name: 'components:pagination', component: Pagination },
+  { path: '/components/popovers', name: 'components:popovers', component: Popovers },
+  { path: '/components/scrollspy', name: 'components:scrollspy', component: Scrollspy },
+  { path: '/components/progress', name: 'components:progress', component: Progress }
 ];
 
 export default [].concat(main, components);

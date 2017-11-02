@@ -87,6 +87,19 @@
     </example-container>
 
     <example-container>
+      <button v-button vStyle="primary" role="button" aria-pressed="true">Primary</button>
+      <button v-button vStyle="primary" role="button" aria-pressed="true" outline>Primary</button>
+      <button v-button vStyle="primary" role="button" aria-pressed="true" disabled>Primary</button>
+      <button v-button vStyle="primary" role="button" aria-pressed="true" size="lg">Large Button</button>
+      <button v-button vStyle="primary" role="button" aria-pressed="true" size="sm">Small Button</button>
+    </example-container>
+
+    <example-container>
+      <a href="#" v-button vStyle="primary" role="button" aria-pressed="true" active>Active Button</a>
+      <a href="#" v-button vStyle="primary" role="button" aria-pressed="true" size="sm" block>Small Button</a>
+    </example-container>
+
+    <example-container>
       <div v-markdown="{content: buttonMd}"></div>
     </example-container>
   </div>
